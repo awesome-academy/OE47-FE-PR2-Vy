@@ -1,0 +1,27 @@
+.map {
+    padding-top: 80px;
+    padding-bottom: 0;
+}
+
+.map-inner {
+    height: 610px;
+    position: relative;
+
+    iframe {
+        width: 100%;
+    }
+
+    .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-14px, -21px);
+        -ms-transform: translate(-14px, -21px);
+        transform: translate(-14px, -21px);
+
+        i {
+            font-size: 48px;
+            color: $color-yellow;
+        }
+    }
+}

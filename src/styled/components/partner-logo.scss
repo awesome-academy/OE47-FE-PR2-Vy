@@ -1,0 +1,19 @@
+.partner-logo {
+    background: #303030;
+    padding: 38px 0;
+}
+
+.logo-carousel .logo-item {
+    display: table;
+
+    .tablecell-inner {
+        display: table-cell;
+        height: 45px;
+        vertical-align: middle;
+    }
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}

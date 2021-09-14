@@ -1,0 +1,12 @@
+.related-products {
+    padding-top: 0;
+    padding-bottom: 50px;
+
+    .section-title {
+        margin-bottom: 50px;
+
+        h2:before {
+            display: none;
+        }
+    }
+}

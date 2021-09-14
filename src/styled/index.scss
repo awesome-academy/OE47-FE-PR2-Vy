@@ -1,0 +1,34 @@
+@import "./global/variables.scss";
+@import "./global/mixins.scss";
+@import "./global/font-face.scss";
+@import "./global/reset.scss";
+@import "./global/animations.scss";
+@import "./global/responsive.scss";
+@import "./components/partials/header.scss";
+@import "./components/partials/footer.scss";
+@import "./components/banner.scss";
+@import "./components/blog-details.scss";
+@import "./components/blogs.scss";
+@import "./components/breadcrumb.scss";
+@import "./components/checkout.scss";
+@import "./components/contact.scss";
+@import "./components/faq.scss";
+@import "./components/homepage.scss";
+@import "./components/lastest-blog.scss";
+@import "./components/maps.scss";
+@import "./components/partner-logo.scss";
+@import "./components/preloader.scss";
+@import "./components/product-details.scss";
+@import "./components/product-shop.scss";
+@import "./components/register.scss";
+@import "./components/related-product.scss";
+@import "./components/shopping-cart.scss";
+
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+    font-family: "Muli", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
