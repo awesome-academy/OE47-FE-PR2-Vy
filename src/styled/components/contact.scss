@@ -1,0 +1,93 @@
+.contact-section {
+    padding-top: 75px;
+    padding-bottom: 80px;
+}
+
+.contact-title {
+    margin-bottom: 30px;
+
+    h4 {
+        color: $color-primary;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+}
+
+.contact-widget .cw-item {
+    background: $color-white;
+    margin-bottom: 11px;
+    -webkit-box-shadow: 0px 8px 35px 10px #e8e8e8;
+    box-shadow: 0px 8px 35px 10px #e8e8e8;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+
+    .ci-icon {
+        float: left;
+        margin-top: 12px;
+
+        i {
+            font-size: 30px;
+            color: $color-text;
+        }
+    }
+
+    .ci-text {
+        display: table;
+        padding-left: 30px;
+
+        span {
+            color: $color-text;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 18px;
+            color: $color-primary;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contact-form .leave-comment {
+    h4 {
+        color: #292f3b;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 38px;
+    }
+
+    .comment-form {
+        input {
+            width: 100%;
+            font-size: 16px;
+            color: $color-link;
+            height: 50px;
+            border: 1px solid #ebebeb;
+            border-radius: 5px;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+            font-size: 16px;
+            color: $color-link;
+            height: 150px;
+            border: 1px solid #ebebeb;
+            border-radius: 5px;
+            padding-left: 20px;
+            padding-top: 10px;
+            margin-bottom: 35px;
+        }
+
+        .site-btn {
+            padding: 13px 35px 11px;
+        }
+    }
+}

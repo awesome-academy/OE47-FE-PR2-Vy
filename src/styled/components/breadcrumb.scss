@@ -1,0 +1,32 @@
+
+.breadcrumb-text {
+    border-bottom: 1px solid #ebebeb;
+    padding: 15px 0;
+
+    &.product-more a:nth-child(1):after {
+        color: $color-primary;
+    }
+
+    a {
+        display: inline-block;
+        font-size: 16px;
+        color: $color-primary;
+        margin-right: 28px;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            right: -18px;
+            top: 0px;
+            content: "";
+            font-family: "FontAwesome";
+            font-size: 16px;
+            color: $color-text;
+        }
+    }
+
+    span {
+        display: inline-block;
+        color: $color-text;
+    }
+}
