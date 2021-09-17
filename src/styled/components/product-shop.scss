@@ -5,6 +5,7 @@
 
 .filter-widget {
     margin-bottom: 45px;
+    position: relative;
 
     .fw-title {
         color: $color-primary;
@@ -20,7 +21,14 @@
             display: inline-block;
             color: $color-link;
             font-size: 16px;
-            line-height: 39px;
+            line-height: 24px;
+        }
+    }
+
+    .category-active {
+        font-weight: bold;
+        a {
+            color: $color-yellow !important;
         }
     }
 
@@ -31,6 +39,7 @@
             position: relative;
             cursor: pointer;
             padding-left: 28px;
+            line-height: 24px;
 
             input {
                 position: absolute;
@@ -66,36 +75,34 @@
         }
     }
 
+    .reset-price {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $color-yellow;
+        cursor: pointer;
+        opacity: 0.8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
     .filter-range-wrap {
-        margin-bottom: 40px;
 
         .range-slider {
-            margin-bottom: 25px;
+            margin-bottom: 1rem;
 
             .price-input {
                 position: relative;
-
-                &:after {
-                    position: absolute;
-                    left: 58px;
-                    top: 13px;
-                    height: 1px;
-                    width: 17px;
-                    background: #ebebeb;
-                    content: "";
-                }
+                display: flex;
+                justify-content: space-between;
 
                 input {
                     font-size: 16px;
-                    color: $color-primary;
-                    max-width: 20%;
-                    text-align: center;
-                    border: 1px solid #ebebeb;
+                    width: 40%;
+                    padding: 0 15px;
+                    height: 40px;
                     border-radius: 2px;
-
-                    &:nth-child(1) {
-                        margin-right: 28px;
-                    }
                 }
             }
         }
@@ -136,10 +143,15 @@
         color: $color-white;
         font-weight: 700;
         background: $color-yellow;
-        padding: 7px 20px 5px;
         border-radius: 2px;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-transform: uppercase;
+        width: 100%;
+        cursor: pointer;
+        height: 40px;
+        text-align: center;
     }
 
     .fw-color-choose .cs-item {
@@ -224,15 +236,27 @@
         }
     }
 
-    .fw-tags a {
-        display: inline-block;
-        font-size: 16px;
-        color: $color-link;
-        padding: 5px 15px;
-        border: 1px solid #ebebeb;
-        margin-right: 5px;
-        margin-bottom: 9px;
-        border-radius: 2px;
+    .fw-tags {
+        a {
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            color: $color-link;
+            padding: 5px 15px;
+            border: 1px solid #ebebeb;
+            margin-right: 5px;
+            margin-bottom: 9px;
+            border-radius: 2px;
+            &:hover {
+                border: 1px solid $color-yellow;
+                color: $color-yellow;
+            }
+        }
+
+        .tags-active {
+            border: 1px solid $color-yellow;
+            color: $color-yellow;
+        }
     }
 }
 
@@ -242,7 +266,13 @@
 }
 
 .product-show-option {
-    margin-bottom: 30px;
+    &_margin-bottom {
+        margin-bottom: 30px;
+    }
+
+    &_margin-top {
+        margin-top: 30px;
+    }
 
     .select-option {
         display: -webkit-box;
