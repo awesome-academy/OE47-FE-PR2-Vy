@@ -12,11 +12,11 @@ import { Box, Tab } from '@mui/material';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import RelatedView from './partials/RelatedView';
 import useLocalStorage from '../../hooks/useLocalStorage';
-import { setCarts, addToBag, getTotalByCart } from '../../features/CartSlice';
+import { setCarts, addToBag, getTotalByCart, setCartTotal } from '../../features/CartSlice';
 import _ from 'lodash';
 import CustomizedSnackbars from '../alert';
 
-const Products = (props) => {
+const Products = () => {
     const [sizeChoose, setSizeChoose] = useState();
     const [colorChoose, setColorChoose] = useState();
     const [count, setCount] = useState(1);
@@ -46,9 +46,12 @@ const Products = (props) => {
 
     const addToCart = (product, size, color, count) => {
         let params = { product, size, color, count };
-        setCart(addToBag(params));
-        setTotal(getTotalByCart(addToBag(params)));
-        dispatch(setCarts(addToBag(params)));
+        let cartTemp = addToBag(params);
+        let totalTemp = getTotalByCart(addToBag(params));
+        setTotal(totalTemp);
+        setCart(cartTemp);
+        dispatch(setCarts(cartTemp));
+        dispatch(setCartTotal(totalTemp));
         setOpenAlert(true);
     }
 

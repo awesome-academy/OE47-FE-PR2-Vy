@@ -7,7 +7,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import _ from 'lodash';
 import useLocalStorage from '../../../hooks/useLocalStorage';
-import { addToBag, setCarts, setCartTotal } from '../../../features/CartSlice';
+import { addToBag, getTotalByCart, setCarts, setCartTotal } from '../../../features/CartSlice';
 import { useDispatch } from 'react-redux';
 import CustomizedSnackbars from './../../alert/index';
 
@@ -57,11 +57,12 @@ const ProductModal = (props) => {
 
     const addToCart = (product, size, color, count) => {
         let params = { product, size, color, count };
-        setCart(addToBag(params).cart);
-        setTotal(addToBag(params).total);
-        dispatch(setCarts(addToBag(params).cart));
-        dispatch(setCartTotal(addToBag(params).total));
-        setOpenAlert(true);
+        let cartTemp = addToBag(params);
+        let totalTemp = getTotalByCart(addToBag(params));
+        setTotal(totalTemp);
+        setCart(cartTemp);
+        dispatch(setCarts(cartTemp));
+        dispatch(setCartTotal(totalTemp));
         setOpenAlert(true);
         setTimeout(() => {
             handleClose();
@@ -203,7 +204,7 @@ const ProductModal = (props) => {
                 setOpen={setOpenAlert}
             />
         </>
-    );
+    )
 }
 
 export default ProductModal;
