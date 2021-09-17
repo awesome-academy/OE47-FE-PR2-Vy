@@ -29,6 +29,17 @@
 }
 
 .checkout-form {
+    .form-item {
+        position: relative;
+        small {
+            font-size: 15px;
+            color: red;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
     h4 {
         color: $color-primary;
         font-weight: 700;

@@ -81,7 +81,7 @@ const ShoppingCart = () => {
                                         <li className="subtotal">Subtotal <span>{formatPrice(totalProduct)}</span></li>
                                         <li className="cart-total">Total <span>{formatPrice(totalProduct)}</span></li>
                                     </ul>
-                                    <a href="#" className="proceed-btn">PROCEED TO CHECK OUT</a>
+                                    <NavLink to={router.checkout} className="proceed-btn">PROCEED TO CHECK OUT</NavLink>
                                 </div>
                             </div>
                         </div>

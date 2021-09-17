@@ -7,5 +7,6 @@ export const router = {
     cart: "/cart",
     checkout: "/checkout",
     register: "/register",
-    login: "/login"
+    login: "/login",
+    profile: "/profile"
 };

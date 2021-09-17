@@ -39,20 +39,6 @@ export const renderResultSearch = (arr, search) => {
     return result;
 };
 
-export const getBrands = async (array, id) => {
-    try {
-        let result;
-        let res = await array.map((value, key) => {
-            if (value.id === id) {
-                result = value.name
-            }
-        });
-        return result;
-    } catch (error) {
-        console.log(error);
-    }
-};
-
 export const formatPrice = (price) => {
     return parseInt(price).toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
 };
@@ -75,4 +61,14 @@ export const configSlug = (str) => {
 
 export const textCapitalize = (str) => {
     return (str.charAt(0).toUpperCase() + str.slice(1));
+}
+
+export const validateEmailReg = (email) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+export const validatePhoneReg = (phone) => {
+    const re = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+    return re.test(String(phone).toLowerCase());
 }

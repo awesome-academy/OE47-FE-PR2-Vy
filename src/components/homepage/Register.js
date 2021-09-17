@@ -1,40 +1,159 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { handleRegister } from '../../features/AuthSlice';
+import { router } from '../../route/constants';
+import CustomizedSnackbars from './../alert/index';
+import { validateEmailReg } from './../../ultils/index';
+import { useHistory } from "react-router-dom";
 
-const Register = (props) => {
+const form = [
+    { name: "firstname", type: "text", label: "Firstname", error: '' },
+    { name: "lastname", type: "text", label: "Lastname", error: '' },
+    { name: "email", type: "text", label: "Email address", error: '' },
+    { name: "password", type: "password", label: "Password", error: '' },
+    { name: "confirmPassword", type: "password", label: "Confirm password", error: '' }
+];
+
+const Register = () => {
+    const [openAlert, setOpenAlert] = useState({
+        open: false,
+        text: '',
+        severity: 'info'
+    });
+    const [formData, setFormData] = useState(form);
+    const status = useSelector(state => state.auth.status);
+    const loading = useSelector(state => state.auth.loading);
+    const error = useSelector(state => state.auth.error);
+    const history = useHistory();
+    const dispatch = useDispatch();
+
+    const checkPasswordTrue = (password, confirmPassword) => {
+        return password && confirmPassword && (password === confirmPassword);
+    }
+
+    const checkConditionField = (data) => {
+        const { firstname, lastname, email, password } = data;
+        return firstname && lastname && validateEmailReg(email) && password.length >= 6;
+    }
+
+    useEffect(() => {
+        if (status == 201 && !error) {
+            setOpenAlert({
+                open: true,
+                severity: 'success',
+                text: 'Register success!'
+            });
+            setTimeout(() => {
+                history.push("/login");
+            }, 1000);
+        }
+        if (status !== 201 && error) {
+            setOpenAlert({
+                open: true,
+                severity: 'error',
+                text: 'Register failed!'
+            });
+        }
+    }, [status, loading, error]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let data = {
+            firstname: e.target.firstname.value,
+            lastname: e.target.lastname.value,
+            email: e.target.email.value,
+            password: e.target.password.value,
+            active: true
+        }
+        if (!checkConditionField(data)) {
+            return setOpenAlert({
+                open: true,
+                severity: 'error',
+                text: 'PLEASE CHECK YOUR INFORMATION!'
+            });
+        }
+        if (!checkPasswordTrue(e.target.password.value, e.target.confirmPassword.value)) {
+            return setOpenAlert({
+                open: true,
+                severity: 'error',
+                text: 'PASSWORD NOT MATCH!'
+            });
+        }
+        dispatch(handleRegister(data));
+    }
+
+    const handleChangeInput = (e, label) => {
+        let temp = [...formData];
+        const indexProduct = temp.findIndex((val) => val.name == e.target.name);
+        switch (e.target.name) {
+            case "firstname":
+            case "lastname":
+                !e.target.value ?
+                    temp[indexProduct].error = [`${label} can't be blank!`]
+                    :
+                    temp[indexProduct].error = '';
+                break;
+            case "email":
+                !validateEmailReg(e.target.value)
+                    ?
+                    temp[indexProduct].error = "Email is invalid!"
+                    :
+                    temp[indexProduct].error = '';
+                break;
+            case "password":
+                e.target.value.length < 6
+                    ?
+                    (temp[indexProduct].error = "Password is too weak!")
+                    :
+                    (temp[indexProduct].error = '');
+                break;
+            default:
+                break;
+        }
+        setFormData(temp);
+    }
+
+    const renderForm = (arr) => {
+        return arr && arr.map((value, key) => {
+            return (
+                <div className="group-input" key={key}>
+                    <label htmlFor={value.label}>{value.label} *</label>
+                    <input type={value.type} name={value.name} onChange={(e) => handleChangeInput(e, value.label)} />
+                    {value.error && <small>{value.error}</small>}
+                </div>
+            )
+        })
+    }
 
     return (
-        <div className="register-login-section spad">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-6 offset-lg-3">
-                        <div className="register-form">
-                            <h2>Register</h2>
-                            <form action="#">
-                                <div className="group-input">
-                                    <label htmlFor="username">Username or email address *</label>
-                                    <input type="text" id="username" />
+        <>
+            <div className="register-login-section spad">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 offset-lg-3">
+                            <div className="register-form">
+                                <h2>Register</h2>
+                                <form onSubmit={handleSubmit}>
+                                    {renderForm(formData)}
+                                    <button type="submit" className="site-btn login-btn">Sign Up</button>
+                                </form>
+                                <div className="switch-login">
+                                    <NavLink to={router.login} className="or-login">Or Login</NavLink>
                                 </div>
-                                <div className="group-input">
-                                    <label htmlFor="pass">Password *</label>
-                                    <input type="text" id="pass" />
-                                </div>
-                                <div className="group-input">
-                                    <label htmlFor="con-pass">Confirm Password *</label>
-                                    <input type="text" id="con-pass" />
-                                </div>
-                                <button type="submit" className="site-btn register-btn">REGISTER</button>
-                            </form>
-                            <div className="switch-login">
-                                <a href="./login.html" className="or-login">Or Login</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+            <CustomizedSnackbars
+                message={openAlert.text}
+                severity={openAlert.severity}
+                open={openAlert.open}
+                setOpen={setOpenAlert}
+            />
+        </>
     );
-
 }
 
 export default Register;

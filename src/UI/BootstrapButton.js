@@ -23,7 +23,6 @@ export const BootstrapButton = styled(Button)({
     '&:active': {
         boxShadow: 'none',
         backgroundColor: '#e7ab3c',
-        borderColor: '#e7ab3c',
         color: '#ffffff',
         outline: 'none',
     },
