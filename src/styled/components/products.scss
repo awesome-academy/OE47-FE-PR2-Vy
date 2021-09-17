@@ -1,0 +1,129 @@
+.product-detail {
+    &_title {
+        margin-bottom: 1rem;
+    }
+
+    &_container {
+        margin-bottom: 1.5rem;
+    }
+
+    &_color,
+    &_size {
+        &_container {
+            display: flex;
+        }
+
+        &_list {
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+            p {
+                &:not(:first-child) {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    &_price {
+        margin-bottom: 1rem;
+        font-size: 14px;
+    }
+
+    &_count {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        icon {
+            color: $color-yellow;
+        }
+
+        &_container {
+            display: flex;
+            align-items: center;
+            .btn-plus,
+            .btn-minus {
+                cursor: pointer;
+                border: solid 0.5px $color-yellow;
+                transition: all linear 0.3s;
+                &:hover {
+                    background: $color-yellow;
+                    transition: all linear 0.3s;
+                    .icon {
+                        color: $color-white;
+                    }
+                }
+            }
+            .input-count {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    &_size {
+        margin-bottom: 1rem;
+        &_item {
+            padding: 5px 8px;
+            margin: 0 10px;
+            background-color: #f2f2f2;
+            transition: all linear 0.3s;
+            cursor: pointer;
+            border-radius: 5px;
+            border: solid 1px transparent;
+            &:hover {
+                transition: all linear 0.3s;
+                border: solid 1px $color-black;
+            }
+
+            &.active {
+                background-color: $color-yellow;
+                color: $color-white;
+            }
+        }
+    }
+
+    &_btn-add {
+        max-width: 200px;
+    }
+
+    &_content {
+        margin-top: 1rem;
+        button {
+            color: $color-black;
+            opacity: 0.8;
+        }
+        button.Mui-selected {
+            color: $color-yellow;
+            opacity: 1;
+        }
+    }
+
+    &_detail-list {
+        margin-left: 20px;
+    }
+
+    &_detail-item {
+        position: relative;
+        list-style: circle;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    &_detail-note {
+        margin-bottom: 1rem;
+    }
+
+    &_shipping-title {
+        margin-top: 1rem;
+        font-weight: bold;
+    }
+
+    &_shipping-detail {
+        margin-left: 10px;
+        p {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.delete-modal {
+    position: relative;
+    &_container {
+        padding: 2rem;
+    }
+
+    &_icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    &_btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .btn-cancel {
+            color: #252525;
+            background: #f3f3f3;
+            border: 2px solid #ebebeb;
+            padding: 12px 20px 12px 20px;
+            opacity: 0.6;
+            transition: all linear 0.3s;margin-right: 1rem;
+            &:hover {
+                opacity: 1;
+                transition: all linear 0.3s;
+            }
+        }
+
+        .btn-remove {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            background: #252525;
+            text-transform: uppercase;
+            padding: 12px 20px 12px 20px;
+            display: block;
+            text-align: center;
+            
+            opacity: 0.6;
+            transition: all linear 0.3s;
+            &:hover {
+                background: #252525;
+                opacity: 1;
+                transition: all linear 0.3s;
+            }
+        }
+    }
+}

@@ -4,27 +4,26 @@ import { handleChangeEntriesPerPage, handleSortPrice } from '../../../features/F
 import Paginations from '../partials/Pagination';
 
 const ShopHeader = (props) => {
-
-    const [sorting, setsorting] = useState();
-    const [entriesPerPage, setentriesPerPage] = useState();
+    const [sorting, setSorting] = useState();
+    const [entriesPerPage, setEntriesPerPage] = useState();
     const dispatch = useDispatch();
 
     const handleSorting = (e) => {
         if (e.target.value !== sorting) {
-            setsorting(e.target.value);
+            setSorting(e.target.value);
             dispatch(handleSortPrice(e.target.value));
         }
     }
 
     const changeEntriesPerPage = (e) => {
         if (e.target.value !== entriesPerPage) {
-            setentriesPerPage(e.target.value);
+            setEntriesPerPage(e.target.value);
             dispatch(handleChangeEntriesPerPage(e.target.value));
         }
     }
 
     return (
-        <div className={props.margin == "top" ? "product-show-option product-show-option_margin-top": "product-show-option product-show-option_margin-bottom"}>
+        <div className={`product-show-option product-show-option${props.margin == "top" ? "_margin-top" : "_margin-bottom"}`}>
             <div className="row align-items-center justify-content-between">
                 <div className="col-lg-7 col-md-7">
                     <div className="select-option">
@@ -47,7 +46,6 @@ const ShopHeader = (props) => {
             </div>
         </div>
     );
-
 }
 
 export default ShopHeader;

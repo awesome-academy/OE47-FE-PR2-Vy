@@ -5,22 +5,20 @@ import { Pagination, Stack } from '@mui/material';
 
 
 const Paginations = () => {
-
-    const [currentPage, setcurrentPage] = useState(1);
-
+    const [currentPage, setCurrentPage] = useState(1);
     const totalPage = useSelector(state => state.products.totalPage);
     const page = useSelector(state => state.filter._page);
     const dispatch = useDispatch();
 
     const handlePageClick = (e, value) => {
         if (value !== currentPage) {
-            setcurrentPage(value);
+            setCurrentPage(value);
             dispatch(handleChagePage(value));
         }
     };
 
     useEffect(() => {
-        setcurrentPage(page);
+        setCurrentPage(page);
     }, [page]);
 
     return (
@@ -37,7 +35,6 @@ const Paginations = () => {
             </Stack>
         </>
     );
-
 }
 
 export default Paginations;

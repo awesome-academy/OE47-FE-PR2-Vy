@@ -123,7 +123,37 @@
 }
 
 .product-item {
+    position: relative;
     margin-bottom: 26px;
+
+    .slick-slider {
+        button {
+            top: 50%;
+            z-index: 1;
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+            &::before {
+                color: $color-yellow;
+            }
+        }
+
+        .slick-prev {
+            left: 0;
+            &:before {
+                content: "\f104";
+                font-family: fontawesome;
+            }
+        }
+
+        .slick-next {
+            right: 0;
+            &:before {
+                content: "\f105";
+                font-family: fontawesome;
+            }
+        }
+    }
 
     &:hover .pi-pic {
         .icon {
@@ -133,6 +163,11 @@
 
         ul {
             bottom: 0;
+        }
+
+        .slick-slider button {
+            opacity: 1;
+            visibility: visible;
         }
     }
 
@@ -174,6 +209,12 @@
             -o-transition: all 0.3s;
             transition: all 0.3s;
             opacity: 0;
+
+            .add-to-wishlist_icon {
+                &:hover {
+                    color: $color-yellow;
+                }
+            }
         }
 
         ul {
@@ -185,31 +226,34 @@
             transition: all 0.3s;
             text-align: center;
             width: 100%;
+            display: flex;
+            justify-content: center;
 
-            li {
+            .quick-view {
                 list-style: none;
                 display: inline-block;
                 background: $color-white;
-
+                font-size: 16px;
+                font-weight: 700;
+                color: $color-primary;
+                display: block;
+                padding: 16px 18px 12px 19px;
+                cursor: pointer;
                 &.w-icon.active a {
                     background: $color-yellow;
                     color: $color-white;
                 }
+            }
 
-                a {
-                    font-size: 16px;
-                    font-weight: 700;
-                    color: $color-primary;
-                    display: block;
-                    padding: 16px 18px 12px 19px;
-                }
+            .quick-view.add-to-cart {
+                background-color: $color-yellow;
             }
         }
     }
 
     .pi-text {
         text-align: center;
-        padding-top: 26px;
+        padding: 1rem 0;
 
         .catagory-name {
             font-size: 10px;

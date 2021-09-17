@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 
 const Banner = (props) => {
-
-    var settings = {
+    const slideSettings = {
         dots: false,
         infinite: true,
         arrows: true,
@@ -16,7 +15,7 @@ const Banner = (props) => {
         <section className="hero-section">
             <div className="hero-items owl-carousel owl-loaded owl-drag">
                 <div className="owl-stage-outer">
-                    <Slider {...settings}>
+                    <Slider {...slideSettings}>
                         <div className="owl-item hero-section-item-1">
                             <div className="single-hero-items set-bg">
                                 <div className="container">

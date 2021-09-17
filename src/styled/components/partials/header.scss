@@ -110,6 +110,8 @@
 
         .login-panel {
             float: right;
+            display: flex;
+            align-items: center;
             font-size: 14px;
             color: $color-primary;
             display: inline-block;
@@ -298,40 +300,6 @@
                     -webkit-transition: all 0.3s;
                     -o-transition: all 0.3s;
                     transition: all 0.3s;
-
-                    .select-items table {
-                        width: 100%;
-
-                        tr td {
-                            padding-bottom: 20px;
-
-                            &.si-pic img {
-                                border: 1px solid #ebebeb;
-                            }
-
-                            &.si-text {
-                                padding-left: 18px;
-
-                                .product-selected {
-                                    p {
-                                        color: $color-yellow;
-                                        line-height: 30px;
-                                        margin-bottom: 7px;
-                                    }
-
-                                    h6 {
-                                        color: #232530;
-                                    }
-                                }
-                            }
-
-                            &.si-close {
-                                color: $color-primary;
-                                font-size: 16px;
-                                cursor: pointer;
-                            }
-                        }
-                    }
 
                     .select-total {
                         overflow: hidden;
@@ -550,4 +518,3 @@
 .slicknav_menu {
     display: none;
 }
-

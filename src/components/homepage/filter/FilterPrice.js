@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { handlerFilterByPrice } from '../../../features/FilterSlice';
-
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import { Box, TextField } from '@mui/material';
 import { BootstrapButton } from './../../../UI/BootstrapButton';
 import CloseIcon from '@mui/icons-material/Close';
 
 const FilterPrice = () => {
-
     const [priceGte, setPriceGte] = useState();
     const [priceLte, setPriceLte] = useState();
     const [temp, setTemp] = useState(0);
-
     const dispatch = useDispatch();
 
     const condition = () => {
@@ -32,7 +28,6 @@ const FilterPrice = () => {
         }
         setPriceGte('');
         setPriceLte('');
-
     }
 
     return (
@@ -56,13 +51,11 @@ const FilterPrice = () => {
                     </div>
                 </div>
             </div>
-
-            <BootstrapButton claFssName="filter-btn" variant="contained" disableRipple onClick={() => handleFilterPrice()} >
+            <BootstrapButton className="filter-btn" disabled={!condition()} variant="contained" onClick={() => handleFilterPrice()} >
                 Filter
             </BootstrapButton>
         </div>
     );
-
 }
 
 export default FilterPrice;
