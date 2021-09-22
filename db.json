@@ -1,0 +1,955 @@
+{
+    "brand": [
+        {
+            "id": 1,
+            "name": "CnK"
+        },
+        {
+            "id": 2,
+            "name": "Tommy Hilfiger"
+        },
+        {
+            "id": 3,
+            "name": "Calvin Klein"
+        },
+        {
+            "id": 4,
+            "name": "Diesel"
+        },
+        {
+            "id": 5,
+            "name": "Pedro"
+        },
+        {
+            "id": 6,
+            "name": "Polo"
+        },
+        {
+            "id": 7,
+            "name": "Ananas"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Towel"
+        },
+        {
+            "id": 2,
+            "name": "Shoes"
+        },
+        {
+            "id": 3,
+            "name": "Dresses"
+        },
+        {
+            "id": 4,
+            "name": "Trousers"
+        },
+        {
+            "id": 5,
+            "name": "Hat"
+        },
+        {
+            "id": 6,
+            "name": "Backpack"
+        },
+        {
+            "id": 7,
+            "name": "Boots"
+        },
+        {
+            "id": 8,
+            "name": "Chunky Heel"
+        },
+        {
+            "id": 9,
+            "name": "Clog"
+        },
+        {
+            "id": 10,
+            "name": "Dockside"
+        },
+        {
+            "id": 11,
+            "name": "Moccasin"
+        },
+        {
+            "id": 12,
+            "name": "Loafer"
+        },
+        {
+            "id": 13,
+            "name": "Sandals"
+        },
+        {
+            "id": 14,
+            "name": "Sneaker"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "image": "./images/products/product-1.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "50",
+            "tag": [
+                10
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 3,
+            "categoriesId": 1
+        },
+        {
+            "id": 2,
+            "image": "./images/products/product-2.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                1,
+                2,
+                3
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 4,
+            "categoriesId": 2
+        },
+        {
+            "id": 3,
+            "image": "./images/products/product-3.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                8,
+                9,
+                2
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                }
+            ],
+            "brandId": 6,
+            "categoriesId": 3
+        },
+        {
+            "id": 4,
+            "image": "./images/products/product-4.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                5,
+                3,
+                8,
+                6
+            ],
+            "size": [
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 2,
+            "categoriesId": 4
+        },
+        {
+            "id": 5,
+            "image": "./images/products/product-5.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                4,
+                2
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 3,
+            "categoriesId": 5
+        },
+        {
+            "id": 6,
+            "image": "./images/products/product-6.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                1
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 6,
+            "categoriesId": 6
+        },
+        {
+            "id": 7,
+            "image": "./images/products/product-7.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 1,
+            "categoriesId": 7
+        },
+        {
+            "id": 8,
+            "image": "./images/products/product-8.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                3,
+                6,
+                5
+            ],
+            "size": [
+                {
+                    "sizeId": 2,
+                    "store": 12
+                }
+            ],
+            "brandId": 5,
+            "categoriesId": 8
+        },
+        {
+            "id": 9,
+            "image": "./images/products/product-9.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                4,
+                7,
+                8
+            ],
+            "size": [
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 7,
+            "categoriesId": 9
+        },
+        {
+            "id": 10,
+            "image": "./images/products/product-8.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "50",
+            "tagId": [
+                9,
+                8,
+                7,
+                10
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 3,
+            "categoriesId": 10
+        },
+        {
+            "id": 11,
+            "image": "./images/products/product-4.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                2,
+                3
+            ],
+            "size": [
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 2,
+            "categoriesId": 11
+        },
+        {
+            "id": 12,
+            "image": "./images/products/product-6.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 2,
+            "categoriesId": 12
+        },
+        {
+            "id": 13,
+            "image": "./images/products/product-2.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                4,
+                5,
+                6,
+                8
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 1,
+            "categoriesId": 13
+        },
+        {
+            "id": 14,
+            "image": "./images/products/product-7.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                7,
+                6,
+                5,
+                3
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                }
+            ],
+            "brandId": 5,
+            "categoriesId": 14
+        },
+        {
+            "id": 15,
+            "image": "./images/products/product-1.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                3,
+                6,
+                9
+            ],
+            "size": [
+                {
+                    "sizeId": 2,
+                    "store": 12
+                }
+            ],
+            "brandId": 2,
+            "categoriesId": 1
+        },
+        {
+            "id": 16,
+            "image": "./images/products/product-3.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                3,
+                9
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 6,
+            "categoriesId": 2
+        },
+        {
+            "id": 17,
+            "image": "./images/products/product-5.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                2,
+                7,
+                9,
+                1
+            ],
+            "size": [
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 7,
+            "categoriesId": 3
+        },
+        {
+            "id": 18,
+            "image": "./images/products/product-9.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                4,
+                7,
+                9,
+                10
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 4,
+            "categoriesId": 4
+        },
+        {
+            "id": 19,
+            "image": "./images/products/product-1.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "50",
+            "tagId": [
+                10
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 4,
+            "categoriesId": 5
+        },
+        {
+            "id": 20,
+            "image": "./images/products/product-2.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                3,
+                5,
+                8
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 6,
+            "categoriesId": 6
+        },
+        {
+            "id": 21,
+            "image": "./images/products/product-3.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                1,
+                9,
+                2,
+                8
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 3,
+            "categoriesId": 7
+        },
+        {
+            "id": 22,
+            "image": "./images/products/product-4.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                5,
+                1,
+                8,
+                6
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 1,
+            "categoriesId": 8
+        },
+        {
+            "id": 23,
+            "image": "./images/products/product-5.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                2,
+                8,
+                5
+            ],
+            "size": [
+                {
+                    "sizeId": 2,
+                    "store": 12
+                }
+            ],
+            "brandId": 5,
+            "categoriesId": 9
+        },
+        {
+            "id": 24,
+            "image": "./images/products/product-6.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                5,
+                7
+            ],
+            "size": [
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 6,
+            "categoriesId": 10
+        },
+        {
+            "id": 25,
+            "image": "./images/products/product-7.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                1
+            ],
+            "size": [
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 4,
+            "categoriesId": 11
+        },
+        {
+            "id": 26,
+            "image": "./images/products/product-8.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                2,
+                4
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 2,
+            "categoriesId": 2
+        },
+        {
+            "id": 27,
+            "image": "./images/products/product-9.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                8,
+                5
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 4,
+            "categoriesId": 13
+        },
+        {
+            "id": 28,
+            "image": "./images/products/product-4.jpg",
+            "name": "Pure Pineapple",
+            "sold": 123,
+            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
+            "price": "34",
+            "tagId": [
+                8,
+                10
+            ],
+            "size": [
+                {
+                    "sizeId": 1,
+                    "store": 15
+                },
+                {
+                    "sizeId": 2,
+                    "store": 12
+                },
+                {
+                    "sizeId": 3,
+                    "store": 9
+                },
+                {
+                    "sizeId": 4,
+                    "store": 20
+                }
+            ],
+            "brandId": 6,
+            "categoriesId": 14
+        }
+    ],
+    "tags": [
+        {
+            "id": 1,
+            "name": "Gift"
+        },
+        {
+            "id": 2,
+            "name": "Electronic"
+        },
+        {
+            "id": 3,
+            "name": "Fashion"
+        },
+        {
+            "id": 4,
+            "name": "Home"
+        },
+        {
+            "id": 5,
+            "name": "Decor"
+        },
+        {
+            "id": 6,
+            "name": "Relax"
+        },
+        {
+            "id": 7,
+            "name": "Work"
+        },
+        {
+            "id": 8,
+            "name": "Advance"
+        },
+        {
+            "id": 9,
+            "name": "Foreign"
+        },
+        {
+            "id": 10,
+            "name": "Country"
+        }
+    ],
+    "size": [
+        {
+            "id": 1,
+            "name": "XS"
+        },
+        {
+            "id": 2,
+            "name": "S"
+        },
+        {
+            "id": 3,
+            "name": "M"
+        },
+        {
+            "id": 4,
+            "name": "L"
+        }
+    ]
+}

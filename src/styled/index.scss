@@ -1,5 +1,4 @@
 @import "./global/variables.scss";
-@import "./global/mixins.scss";
 @import "./global/font-face.scss";
 @import "./global/reset.scss";
 @import "./global/animations.scss";
@@ -23,7 +22,7 @@
 @import "./components/register.scss";
 @import "./components/related-product.scss";
 @import "./components/shopping-cart.scss";
-
+@import "./components/pagination.scss";
 
 html,
 body {
@@ -31,4 +30,15 @@ body {
     box-sizing: border-box;
     font-family: "Muli", sans-serif;
     -webkit-font-smoothing: antialiased;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }

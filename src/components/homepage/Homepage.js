@@ -66,17 +66,17 @@ const Homepage = (props) => {
                             <div className="product-slider owl-carousel owl-loaded owl-drag">
                                 <div className="owl-stage-outer">
                                     <Slider {...settings} >
-                                        <div className="owl-item cloned">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-2.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -100,17 +100,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item cloned">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-3.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -134,17 +134,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item cloned">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-4.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -168,18 +168,18 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-1.jpg" alt="" />
                                                     <div className="sale">Sale</div>
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -204,17 +204,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item active">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-2.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -238,17 +238,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item active">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-3.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -272,17 +272,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item active">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-4.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -306,18 +306,18 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item cloned">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-1.jpg" alt="" />
                                                     <div className="sale">Sale</div>
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -342,17 +342,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item cloned">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-2.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -376,17 +376,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item cloned">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/women-3.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -461,17 +461,17 @@ const Homepage = (props) => {
                             <div className="product-slider owl-carousel owl-loaded owl-drag">
                                 <div className="owl-stage-outer">
                                     <Slider {...settings} >
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-2.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -495,17 +495,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-3.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -529,17 +529,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-4.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -563,18 +563,18 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-1.jpg" alt="" />
                                                     <div className="sale">Sale</div>
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -599,17 +599,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-2.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -633,17 +633,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-3.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -667,17 +667,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-4.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -701,18 +701,18 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-1.jpg" alt="" />
                                                     <div className="sale">Sale</div>
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -737,17 +737,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-2.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -771,17 +771,17 @@ const Homepage = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="owl-item">
+                                        <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
                                                     <img src="./images/products/man-3.jpg" alt="" />
                                                     <div className="icon">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
                                                     </div>
                                                     <ul>
                                                         <li className="w-icon active">
                                                             <a href="#">
-                                                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
                                                             </a>
                                                         </li>
                                                         <li className="quick-view">
@@ -984,55 +984,7 @@ const Homepage = (props) => {
                     </div>
                 </div>
             </section>
-            <div className="partner-logo">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-2" >
-                            <div className="logo-item">
-                                <div className="tablecell-inner">
-                                    <img src="./images/logo-carousel/logo-1.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2" >
-                            <div className="logo-item">
-                                <div className="tablecell-inner">
-                                    <img src="./images/logo-carousel/logo-2.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2" >
-                            <div className="logo-item">
-                                <div className="tablecell-inner">
-                                    <img src="./images/logo-carousel/logo-3.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2" >
-                            <div className="logo-item">
-                                <div className="tablecell-inner">
-                                    <img src="./images/logo-carousel/logo-4.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2" >
-                            <div className="logo-item">
-                                <div className="tablecell-inner">
-                                    <img src="./images/logo-carousel/logo-5.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-2" >
-                            <div className="logo-item">
-                                <div className="tablecell-inner">
-                                    <img src="./images/logo-carousel/logo-3.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            
 
 
         </>
