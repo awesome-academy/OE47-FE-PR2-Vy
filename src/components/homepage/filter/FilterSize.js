@@ -3,16 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { handleFilterBySize } from '../../../features/FilterSlice';
 import { Stack, Chip } from '@mui/material';
 
-
 const FilterSize = () => {
-
     const [sizeArr, setSizeArr] = useState([]);
-
     const size = useSelector(state => state.products.size);
     const dispatch = useDispatch();
 
     const handleFilterSize = (value) => {
-        let temp = [...sizeArr]
+        let temp = [...sizeArr];
         if (!(temp.some(val => val === value))) {
             temp = [...temp, value];
             setSizeArr(temp);
@@ -28,7 +25,7 @@ const FilterSize = () => {
     const renderSize = (arr) => {
         return arr && arr.map((value, key) => {
             return (
-                <Chip label={value.name} color="warning" variant={
+                <Chip key={key} label={value.name} color="warning" variant={
                     !(sizeArr.some(val => val === value.id)) ? "outlined" : "default"} onClick={() => handleFilterSize(value.id)} />
             )
         });
@@ -42,7 +39,6 @@ const FilterSize = () => {
             </Stack>
         </div>
     );
-
 }
 
 export default FilterSize;

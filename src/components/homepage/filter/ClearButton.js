@@ -4,9 +4,7 @@ import { clearAllFilter } from '../../../features/FilterSlice';
 import { BootstrapButton } from '../../../UI/BootstrapButton';
 
 const ClearButton = () => {
-
     const [show, setShow] = useState(false);
-
     const filtersApplied = useSelector(state => state.filter.filtersApplied);
     const dispatch = useDispatch();
 
@@ -26,15 +24,12 @@ const ClearButton = () => {
 
     return (
         <>
-            {
-                show &&
-                <BootstrapButton className="site-btn w-100 p-2 mb-4" variant="contained" disableRipple onClick={() => clearFilterClick()} >
-                    Clear All Filter
-                </BootstrapButton>
+            {show && <BootstrapButton className="site-btn w-100 p-2 mb-4" variant="contained" onClick={() => clearFilterClick()} >
+                Clear All Filter
+            </BootstrapButton>
             }
         </>
     );
-
 }
 
 export default ClearButton;

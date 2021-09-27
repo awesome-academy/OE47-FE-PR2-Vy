@@ -28,14 +28,21 @@
 
             td {
                 text-align: center;
-                padding-bottom: 34px;
+                padding-bottom: 1rem;
+
+                &:first-child {
+                    padding-top: 1rem;
+                }
 
                 &.first-row {
                     padding-top: 30px;
                 }
 
                 &.cart-pic {
-                    width: 21%;
+                    width: 15%;
+                    img {
+                        width: 50%;
+                    }
                 }
 
                 &.cart-title {
@@ -60,7 +67,7 @@
                 }
 
                 &.qua-col {
-                    width: 16%;
+                    width: 10%;
 
                     .quantity {
                         display: -webkit-box;
@@ -72,11 +79,9 @@
                     }
 
                     .pro-qty {
-                        width: 123px;
-                        height: 46px;
-                        border: 2px solid #ebebeb;
                         padding: 0 15px;
-                        float: left;
+                        display: flex;
+                        align-items: center;
 
                         .qtybtn {
                             font-size: 24px;
@@ -89,6 +94,23 @@
                             &.dec {
                                 font-size: 30px;
                             }
+                        }
+
+                        .btn-minus,
+                        .btn-plus {
+                            border: solid #f2f2f2 0.5px;
+                            cursor: pointer;
+                            &:hover {
+                                background: $color-yellow;
+                                color: $color-white;
+                                .icon {
+                                    color: $color-white;
+                                }
+                            }
+                        }
+
+                        .input-count {
+                            margin: 0 10px;
                         }
 
                         input {
@@ -111,7 +133,13 @@
                 &.close-td {
                     font-size: 16px;
                     color: $color-primary;
+                    cursor: pointer;
                     width: 8%;
+                    opacity: 0.5;
+
+                    &:hover {
+                        opacity: 1;
+                    }
 
                     i {
                         cursor: pointer;
@@ -132,6 +160,11 @@
         margin-right: 8px;
         padding: 12px 20px 12px 20px;
         margin-bottom: 10px;
+    }
+
+    .continue-shop.active {
+        background: $color-yellow;
+        color: $color-white;
     }
 
     .up-cart {

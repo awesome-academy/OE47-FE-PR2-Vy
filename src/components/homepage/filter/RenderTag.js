@@ -4,23 +4,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { handleFilterByTags } from '../../../features/FilterSlice';
 
 const RenderTag = () => {
-
-    const [tagsState, settags] = useState([]);
-
+    const [tagsState, setTagsState] = useState([]);
     const tags = useSelector(state => state.products.tags);
     const dispatch = useDispatch();
 
     const filterTag = (value) => {
-        let temp;
-        temp = [...tagsState];
+        let temp = [...tagsState];
         if (!(temp.some(val => val === value))) {
             temp = [...temp, value];
-            settags(temp);
+            setTagsState(temp);
             dispatch(handleFilterByTags(temp));
         }
         else {
             temp = temp.filter(val => val !== value);
-            settags(temp);
+            setTagsState(temp);
             dispatch(handleFilterByTags(temp));
         }
     }
@@ -38,12 +35,11 @@ const RenderTag = () => {
     return (
         <div className="filter-widget">
             <h4 className="fw-title">Tags</h4>
-            <div className="fw-tags">
+            <div className="fw-tags mt-2">
                 {renderTags(tags)}
             </div>
         </div>
     );
-
 }
 
 export default RenderTag;

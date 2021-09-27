@@ -1,15 +1,12 @@
 import * as React from 'react';
-
 import Stack from '@mui/material/Stack';
 import { Snackbar, Alert } from '@mui/material';
 
 const CustomizedSnackbars = (props) => {
-
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
         }
-
         props.setOpen(false);
     };
 
@@ -23,4 +20,5 @@ const CustomizedSnackbars = (props) => {
         </Stack>
     );
 }
+
 export default CustomizedSnackbars;

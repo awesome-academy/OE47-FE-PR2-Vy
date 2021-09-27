@@ -32,924 +32,1396 @@
     "categories": [
         {
             "id": 1,
-            "name": "Towel"
+            "name": "New Arrivals"
         },
         {
             "id": 2,
-            "name": "Shoes"
+            "name": "Charles & Keith Collection"
         },
         {
             "id": 3,
-            "name": "Dresses"
+            "name": "Crossbody Bags"
         },
         {
             "id": 4,
-            "name": "Trousers"
+            "name": "Handbags"
         },
         {
             "id": 5,
-            "name": "Hat"
+            "name": "ShoulderBags"
         },
         {
             "id": 6,
-            "name": "Backpack"
+            "name": "Tote Bags"
         },
         {
             "id": 7,
-            "name": "Boots"
+            "name": "Mini Bags"
         },
         {
             "id": 8,
-            "name": "Chunky Heel"
+            "name": "Clutches"
         },
         {
             "id": 9,
-            "name": "Clog"
+            "name": "Backpacks"
         },
         {
             "id": 10,
-            "name": "Dockside"
+            "name": "Bucket Bags"
         },
         {
             "id": 11,
-            "name": "Moccasin"
-        },
-        {
-            "id": 12,
-            "name": "Loafer"
-        },
-        {
-            "id": 13,
-            "name": "Sandals"
-        },
-        {
-            "id": 14,
-            "name": "Sneaker"
+            "name": "Kids' Bags"
         }
     ],
     "products": [
         {
-            "id": 1,
-            "image": "./images/products/product-1.jpg",
-            "name": "Pure Pineapple",
+            "id": "1",
+            "image": [
+                "/images/products/product-1.jpg",
+                "/images/products/product-2.jpg",
+                "/images/products/product-3.jpg",
+                "/images/products/product-4.jpg",
+                "/images/products/product-5.jpg"
+            ],
+            "name": "Charlot Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "84000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "50",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "560000",
             "tag": [
                 10
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 3,
+            "brandId": "3",
             "categoriesId": 1
         },
         {
-            "id": 2,
-            "image": "./images/products/product-2.jpg",
-            "name": "Pure Pineapple",
+            "id": "2",
+            "image": [
+                "/images/products/product-6.jpg",
+                "/images/products/product-7.jpg",
+                "/images/products/product-8.jpg",
+                "/images/products/product-9.jpg",
+                "/images/products/product-10.jpg"
+            ],
+            "name": "Sonia Recycled Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "white"
+            ],
+            "size": [
+                "S",
+                "XL"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 1,
                 2,
                 3
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 4,
+            "brandId": "4",
             "categoriesId": 2
         },
         {
-            "id": 3,
-            "image": "./images/products/product-3.jpg",
-            "name": "Pure Pineapple",
+            "id": "3",
+            "image": [
+                "/images/products/product-11.jpg",
+                "/images/products/product-12.jpg",
+                "/images/products/product-13.jpg",
+                "/images/products/product-14.jpg",
+                "/images/products/product-15.jpg"
+            ],
+            "name": "Zadie Padded Shoulder Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "black",
+                "purple"
+            ],
+            "size": [
+                "S",
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 8,
                 9,
                 2
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                }
-            ],
-            "brandId": 6,
+            "brandId": "6",
             "categoriesId": 3
         },
         {
-            "id": 4,
-            "image": "./images/products/product-4.jpg",
-            "name": "Pure Pineapple",
+            "id": "4",
+            "image": [
+                "/images/products/product-16.jpg",
+                "/images/products/product-17.jpg",
+                "/images/products/product-18.jpg",
+                "/images/products/product-19.jpg",
+                "/images/products/product-20.jpg"
+            ],
+            "name": "Mini Gabine Saddle Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow",
+                "white",
+                "blue"
+            ],
+            "size": [
+                "XS",
+                "S",
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 5,
                 3,
                 8,
                 6
             ],
-            "size": [
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 2,
+            "brandId": "2",
             "categoriesId": 4
         },
         {
-            "id": 5,
-            "image": "./images/products/product-5.jpg",
-            "name": "Pure Pineapple",
+            "id": "5",
+            "image": [
+                "/images/products/product-21.jpg",
+                "/images/products/product-22.jpg",
+                "/images/products/product-23.jpg",
+                "/images/products/product-24.jpg",
+                "/images/products/product-25.jpg"
+            ],
+            "name": "Chunky Chain Tweed Bucket Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow",
+                "purple",
+                "blue"
+            ],
+            "size": [
+                "M",
+                "L",
+                "XL"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 4,
                 2
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 3,
+            "brandId": "3",
             "categoriesId": 5
         },
         {
-            "id": 6,
-            "image": "./images/products/product-6.jpg",
-            "name": "Pure Pineapple",
+            "id": "6",
+            "image": [
+                "/images/products/product-26.jpg",
+                "/images/products/product-27.jpg",
+                "/images/products/product-28.jpg",
+                "/images/products/product-29.jpg",
+                "/images/products/product-30.jpg"
+            ],
+            "name": "Double Handle Quilted Tote Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "black",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 1
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 6,
+            "brandId": "6",
             "categoriesId": 6
         },
         {
-            "id": 7,
-            "image": "./images/products/product-7.jpg",
-            "name": "Pure Pineapple",
+            "id": "7",
+            "image": [
+                "/images/products/product-31.jpg",
+                "/images/products/product-32.jpg",
+                "/images/products/product-33.jpg",
+                "/images/products/product-34.jpg",
+                "/images/products/product-35.jpg"
+            ],
+            "name": "Tweed Crescent Crossbody Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow",
+                "red"
+            ],
+            "size": [
+                "XS",
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 1,
                 2,
                 3,
                 4
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 1,
+            "brandId": "1",
             "categoriesId": 7
         },
         {
-            "id": 8,
-            "image": "./images/products/product-8.jpg",
-            "name": "Pure Pineapple",
+            "id": "8",
+            "image": [
+                "/images/products/product-36.jpg",
+                "/images/products/product-37.jpg",
+                "/images/products/product-38.jpg",
+                "/images/products/product-39.jpg",
+                "/images/products/product-40.jpg"
+            ],
+            "name": "Crossbody Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow",
+                "brown"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 3,
                 6,
                 5
             ],
-            "size": [
-                {
-                    "sizeId": 2,
-                    "store": 12
-                }
-            ],
-            "brandId": 5,
+            "brandId": "5",
             "categoriesId": 8
         },
         {
-            "id": 9,
-            "image": "./images/products/product-9.jpg",
-            "name": "Pure Pineapple",
+            "id": "9",
+            "image": [
+                "/images/products/product-41.jpg",
+                "/images/products/product-42.jpg",
+                "/images/products/product-43.jpg",
+                "/images/products/product-44.jpg",
+                "/images/products/product-45.jpg"
+            ],
+            "name": "Quilted Laptop Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow",
+                "grey"
+            ],
+            "size": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 4,
                 7,
                 8
             ],
-            "size": [
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 7,
+            "brandId": "7",
             "categoriesId": 9
         },
         {
-            "id": 10,
-            "image": "./images/products/product-8.jpg",
-            "name": "Pure Pineapple",
+            "id": "10",
+            "image": [
+                "/images/products/product-46.jpg",
+                "/images/products/product-47.jpg",
+                "/images/products/product-48.jpg",
+                "/images/products/product-49.jpg",
+                "/images/products/product-50.jpg"
+            ],
+            "name": "Sculptural Bucket Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "50",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "50000",
             "tagId": [
                 9,
                 8,
                 7,
                 10
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 3,
+            "brandId": "3",
             "categoriesId": 10
         },
         {
-            "id": 11,
-            "image": "./images/products/product-4.jpg",
+            "id": "11",
+            "image": [
+                "/images/products/product-51.jpg",
+                "/images/products/product-52.jpg",
+                "/images/products/product-53.jpg",
+                "/images/products/product-54.jpg",
+                "/images/products/product-55.jpg"
+            ],
             "name": "Pure Pineapple",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 2,
                 3
             ],
-            "size": [
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 2,
+            "brandId": "2",
             "categoriesId": 11
         },
         {
-            "id": 12,
-            "image": "./images/products/product-6.jpg",
-            "name": "Pure Pineapple",
+            "id": "12",
+            "image": [
+                "/images/products/product-55.jpg",
+                "/images/products/product-56.jpg",
+                "/images/products/product-57.jpg",
+                "/images/products/product-58.jpg",
+                "/images/products/product-59.jpg"
+            ],
+            "name": "Quilted Chain Shoulder Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 1,
                 2,
                 3,
                 4
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 2,
-            "categoriesId": 12
+            "brandId": "2",
+            "categoriesId": 8
         },
         {
-            "id": 13,
-            "image": "./images/products/product-2.jpg",
-            "name": "Pure Pineapple",
+            "id": "13",
+            "image": [
+                "/images/products/product-60.jpg",
+                "/images/products/product-61.jpg",
+                "/images/products/product-62.jpg",
+                "/images/products/product-63.jpg",
+                "/images/products/product-64.jpg",
+                "/images/products/product-65.jpg"
+            ],
+            "name": "Metallic Accent Shoulder Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 4,
                 5,
                 6,
                 8
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 1,
-            "categoriesId": 13
+            "brandId": "1",
+            "categoriesId": 6
         },
         {
-            "id": 14,
-            "image": "./images/products/product-7.jpg",
-            "name": "Pure Pineapple",
+            "id": "14",
+            "image": [
+                "/images/products/product-66.jpg",
+                "/images/products/product-67.jpg",
+                "/images/products/product-68.jpg",
+                "/images/products/product-69.jpg",
+                "/images/products/product-70.jpg"
+            ],
+            "name": "Wrinkled-Effect Half-Moon Crossbody Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 7,
                 6,
                 5,
                 3
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                }
-            ],
-            "brandId": 5,
-            "categoriesId": 14
+            "brandId": "5",
+            "categoriesId": 10
         },
         {
-            "id": 15,
-            "image": "./images/products/product-1.jpg",
-            "name": "Pure Pineapple",
+            "id": "15",
+            "image": [
+                "/images/products/product-71.jpg",
+                "/images/products/product-72.jpg",
+                "/images/products/product-73.jpg",
+                "/images/products/product-74.jpg",
+                "/images/products/product-75.jpg"
+            ],
+            "name": "Chunky Chain-Link Crossbody Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 3,
                 6,
                 9
             ],
-            "size": [
-                {
-                    "sizeId": 2,
-                    "store": 12
-                }
-            ],
-            "brandId": 2,
+            "brandId": "2",
             "categoriesId": 1
         },
         {
-            "id": 16,
-            "image": "./images/products/product-3.jpg",
-            "name": "Pure Pineapple",
+            "id": "16",
+            "image": [
+                "/images/products/product-76.jpg",
+                "/images/products/product-77.jpg",
+                "/images/products/product-78.jpg",
+                "/images/products/product-79.jpg",
+                "/images/products/product-80.jpg"
+            ],
+            "name": "Wrinkled-Effect Puffy Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 3,
                 9
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 6,
+            "brandId": "6",
             "categoriesId": 2
         },
         {
-            "id": 17,
-            "image": "./images/products/product-5.jpg",
-            "name": "Pure Pineapple",
+            "id": "17",
+            "image": [
+                "/images/products/product-81.jpg",
+                "/images/products/product-82.jpg",
+                "/images/products/product-83.jpg",
+                "/images/products/product-84.jpg",
+                "/images/products/product-85.jpg"
+            ],
+            "name": "Chain Link Crossbody Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 2,
                 7,
                 9,
                 1
             ],
-            "size": [
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 7,
+            "brandId": "7",
             "categoriesId": 3
         },
         {
-            "id": 18,
-            "image": "./images/products/product-9.jpg",
-            "name": "Pure Pineapple",
+            "id": "18",
+            "image": [
+                "/images/products/product-86.jpg",
+                "/images/products/product-87.jpg",
+                "/images/products/product-88.jpg",
+                "/images/products/product-89.jpg",
+                "/images/products/product-90.jpg"
+            ],
+            "name": "Beaded Handle Shoulder Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 4,
                 7,
                 9,
                 10
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 4,
+            "brandId": "4",
             "categoriesId": 4
         },
         {
-            "id": 19,
-            "image": "./images/products/product-1.jpg",
-            "name": "Pure Pineapple",
+            "id": "19",
+            "image": [
+                "/images/products/product-91.jpg",
+                "/images/products/product-92.jpg",
+                "/images/products/product-93.jpg",
+                "/images/products/product-94.jpg",
+                "/images/products/product-95.jpg"
+            ],
+            "name": "Single Handle Puffer Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "50",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "50000",
             "tagId": [
                 10
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 4,
+            "brandId": "4",
             "categoriesId": 5
         },
         {
-            "id": 20,
-            "image": "./images/products/product-2.jpg",
-            "name": "Pure Pineapple",
+            "id": "20",
+            "image": [
+                "/images/products/product-96.jpg",
+                "/images/products/product-97.jpg",
+                "/images/products/product-98.jpg",
+                "/images/products/product-99.jpg",
+                "/images/products/product-100.jpg"
+            ],
+            "name": "Ring Detail Large Hobo Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 3,
                 5,
                 8
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 6,
+            "brandId": "6",
             "categoriesId": 6
         },
         {
-            "id": 21,
-            "image": "./images/products/product-3.jpg",
-            "name": "Pure Pineapple",
+            "id": "21",
+            "image": [
+                "/images/products/product-101.jpg",
+                "/images/products/product-102.jpg",
+                "/images/products/product-103.jpg",
+                "/images/products/product-104.jpg",
+                "/images/products/product-105.jpg"
+            ],
+            "name": "Puffy Backpack",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 1,
                 9,
                 2,
                 8
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 3,
+            "brandId": "3",
             "categoriesId": 7
         },
         {
-            "id": 22,
-            "image": "./images/products/product-4.jpg",
-            "name": "Pure Pineapple",
+            "id": "22",
+            "image": [
+                "/images/products/product-106.jpg",
+                "/images/products/product-107.jpg",
+                "/images/products/product-108.jpg",
+                "/images/products/product-109.jpg",
+                "/images/products/product-110.jpg"
+            ],
+            "name": "Quilted Circle Crossbody Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 5,
                 1,
                 8,
                 6
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 1,
+            "brandId": "1",
             "categoriesId": 8
         },
         {
-            "id": 23,
-            "image": "./images/products/product-5.jpg",
-            "name": "Pure Pineapple",
+            "id": "23",
+            "image": [
+                "/images/products/product-111.jpg",
+                "/images/products/product-112.jpg",
+                "/images/products/product-113.jpg",
+                "/images/products/product-114.jpg",
+                "/images/products/product-115.jpg"
+            ],
+            "name": "Beaded Strap Ruched Shoulder Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 2,
                 8,
                 5
             ],
-            "size": [
-                {
-                    "sizeId": 2,
-                    "store": 12
-                }
-            ],
-            "brandId": 5,
+            "brandId": "5",
             "categoriesId": 9
         },
         {
-            "id": 24,
-            "image": "./images/products/product-6.jpg",
-            "name": "Pure Pineapple",
+            "id": "24",
+            "image": [
+                "/images/products/product-116.jpg",
+                "/images/products/product-117.jpg",
+                "/images/products/product-118.jpg",
+                "/images/products/product-119.jpg",
+                "/images/products/product-120.jpg"
+            ],
+            "name": "Quilted Chain Strap Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 5,
                 7
             ],
-            "size": [
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 6,
+            "brandId": "6",
             "categoriesId": 10
         },
         {
-            "id": 25,
-            "image": "./images/products/product-7.jpg",
-            "name": "Pure Pineapple",
+            "id": "25",
+            "image": [
+                "/images/products/product-121.jpg",
+                "/images/products/product-122.jpg",
+                "/images/products/product-123.jpg",
+                "/images/products/product-124.jpg",
+                "/images/products/product-125.jpg"
+            ],
+            "name": "Textured Bucket Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 1
             ],
-            "size": [
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 4,
+            "brandId": "4",
             "categoriesId": 11
         },
         {
-            "id": 26,
-            "image": "./images/products/product-8.jpg",
-            "name": "Pure Pineapple",
+            "id": "26",
+            "image": [
+                "/images/products/product-126.jpg",
+                "/images/products/product-127.jpg",
+                "/images/products/product-128.jpg",
+                "/images/products/product-129.jpg",
+                "/images/products/product-130.jpg"
+            ],
+            "name": "Quilted Clutch",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 2,
                 4
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 2,
+            "brandId": "2",
             "categoriesId": 2
         },
         {
-            "id": 27,
-            "image": "./images/products/product-9.jpg",
-            "name": "Pure Pineapple",
+            "id": "27",
+            "image": [
+                "/images/products/product-131.jpg",
+                "/images/products/product-132.jpg",
+                "/images/products/product-133.jpg",
+                "/images/products/product-134.jpg",
+                "/images/products/product-135.jpg"
+            ],
+            "name": "Pleated Hobo Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 8,
                 5
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 4,
-            "categoriesId": 13
+            "brandId": "4",
+            "categoriesId": 5
         },
         {
-            "id": 28,
-            "image": "./images/products/product-4.jpg",
-            "name": "Pure Pineapple",
+            "id": "28",
+            "image": [
+                "/images/products/product-136.jpg",
+                "/images/products/product-137.jpg",
+                "/images/products/product-138.jpg",
+                "/images/products/product-139.jpg",
+                "/images/products/product-140.jpg"
+            ],
+            "name": "Double Handle Sculptural Tote Bag",
+            "note": "Keep your CHARLES & KEITH products in top condition. Visit our product care page to learn more about how to care for them.",
+            "detail": {
+                "material": "wool",
+                "height": "70cm",
+                "burst": "90cm",
+                "waist": "60cm",
+                "shoulder": "40cm",
+                "weight": "1.3kg"
+            },
+            "sale": "64000",
             "sold": 123,
-            "description": "It's recommended to use a flex container to render the grid. This allows a flexible layout, resizes well, and works on all devices.",
-            "price": "34",
+            "color": [
+                "green",
+                "yellow"
+            ],
+            "size": [
+                "M",
+                "L"
+            ],
+            "description": "There is beauty in the understated and our Charlot crossbody is proof of that. Whether it is for work or a dinner date, feel your very best when you have this stylish bag next to you. We are loving the gold-tone details which match seamlessly with the sandy taupe hue, plus the elegantly curved corners finish this charming design on a high note. For an extra confidence booster, pair it with a belted shirt dress and edgy sock boots.",
+            "price": "34000",
             "tagId": [
                 8,
                 10
             ],
-            "size": [
-                {
-                    "sizeId": 1,
-                    "store": 15
-                },
-                {
-                    "sizeId": 2,
-                    "store": 12
-                },
-                {
-                    "sizeId": 3,
-                    "store": 9
-                },
-                {
-                    "sizeId": 4,
-                    "store": 20
-                }
-            ],
-            "brandId": 6,
-            "categoriesId": 14
+            "brandId": "6",
+            "categoriesId": 7
         }
     ],
     "tags": [
         {
-            "id": 1,
-            "name": "Gift"
+            "id": "1",
+            "name": "Essential"
         },
         {
-            "id": 2,
-            "name": "Electronic"
+            "id": "2",
+            "name": "Party"
         },
         {
-            "id": 3,
-            "name": "Fashion"
+            "id": "3",
+            "name": "Wedding"
         },
         {
-            "id": 4,
-            "name": "Home"
+            "id": "4",
+            "name": "Work Wear"
         },
         {
-            "id": 5,
-            "name": "Decor"
+            "id": "5",
+            "name": "Casual"
         },
         {
-            "id": 6,
-            "name": "Relax"
+            "id": "6",
+            "name": "Personalise Your Accessories"
         },
         {
-            "id": 7,
-            "name": "Work"
+            "id": "7",
+            "name": "She Can Be"
         },
         {
-            "id": 8,
-            "name": "Advance"
+            "id": "8",
+            "name": "School"
         },
         {
-            "id": 9,
-            "name": "Foreign"
+            "id": "9",
+            "name": "Pre-orders"
         },
         {
-            "id": 10,
-            "name": "Country"
+            "id": "10",
+            "name": "Trending"
         }
     ],
     "size": [
         {
-            "id": 1,
+            "id": "1",
             "name": "XS"
         },
         {
-            "id": 2,
+            "id": "2",
             "name": "S"
         },
         {
-            "id": 3,
+            "id": "3",
             "name": "M"
         },
         {
-            "id": 4,
+            "id": "4",
             "name": "L"
+        }
+    ],
+    "inventory": [
+        {
+            "id": "inven1",
+            "productId": "1",
+            "size": "M",
+            "color": "yellow",
+            "stock": 10
+        },
+        {
+            "id": "inven2",
+            "productId": "1",
+            "size": "M",
+            "color": "green",
+            "stock": 10
+        },
+        {
+            "id": "inven3",
+            "productId": "1",
+            "size": "S",
+            "color": "yellow",
+            "stock": 18
+        },
+        {
+            "id": "inven4",
+            "productId": "1",
+            "size": "S",
+            "color": "green",
+            "stock": 4
+        },
+        {
+            "id": "inven5",
+            "productId": "2",
+            "size": "S",
+            "color": "white",
+            "stock": 30
+        },
+        {
+            "id": "inven5",
+            "productId": "2",
+            "size": "S",
+            "color": "green",
+            "stock": 312
+        },
+        {
+            "id": "inven6",
+            "productId": "2",
+            "size": "L",
+            "color": "green",
+            "stock": 7
+        },
+        {
+            "id": "inven7",
+            "productId": "2",
+            "size": "L",
+            "color": "purple",
+            "stock": 16
+        },
+        {
+            "id": "inven8",
+            "productId": "3",
+            "size": "XS",
+            "color": "green",
+            "stock": 19
+        },
+        {
+            "id": "inven9",
+            "productId": "3",
+            "size": "XS",
+            "color": "black",
+            "stock": 5
+        },
+        {
+            "id": "inven10",
+            "productId": "4",
+            "size": "M",
+            "color": "green",
+            "stock": 49
+        },
+        {
+            "id": "inven11",
+            "productId": "4",
+            "size": "M",
+            "color": "blue",
+            "stock": 4
+        },
+        {
+            "id": "inven12",
+            "productId": "4",
+            "size": "L",
+            "color": "green",
+            "stock": 4
+        },
+        {
+            "id": "inven13",
+            "productId": "4",
+            "size": "L",
+            "color": "purple",
+            "stock": 43
+        },
+        {
+            "id": "inven14",
+            "productId": "4",
+            "size": "XL",
+            "color": "green",
+            "stock": 4
+        },
+        {
+            "id": "inven15",
+            "productId": "4",
+            "size": "XL",
+            "color": "white",
+            "stock": 44
+        },
+        {
+            "id": "inven16",
+            "productId": "5",
+            "size": "S",
+            "color": "green",
+            "stock": 4
+        },
+        {
+            "id": "inven17",
+            "productId": "5",
+            "size": "S",
+            "color": "blue",
+            "stock": 42
+        },
+        {
+            "id": "inven18",
+            "productId": "5",
+            "size": "M",
+            "color": "green",
+            "stock": 41
+        },
+        {
+            "id": "inven19",
+            "productId": "5",
+            "size": "M",
+            "color": "pink",
+            "stock": 4
+        },
+        {
+            "id": "inven20",
+            "productId": "6",
+            "size": "M",
+            "color": "black",
+            "stock": 48
+        },
+        {
+            "id": "inven21",
+            "productId": "6",
+            "size": "L",
+            "color": "green",
+            "stock": 4
+        },
+        {
+            "id": "inven22",
+            "productId": "7",
+            "size": "S",
+            "color": "green",
+            "stock": 48
+        },
+        {
+            "id": "inven23",
+            "productId": "7",
+            "size": "S",
+            "color": "blue",
+            "stock": 49
+        },
+        {
+            "id": "inven25",
+            "productId": "7",
+            "size": "M",
+            "color": "purple",
+            "stock": 4
+        },
+        {
+            "id": "inven26",
+            "productId": "7",
+            "size": "M",
+            "color": "green",
+            "stock": 48
         }
     ]
 }

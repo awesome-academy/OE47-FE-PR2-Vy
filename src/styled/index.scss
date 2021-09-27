@@ -3,6 +3,8 @@
 @import "./global/reset.scss";
 @import "./global/animations.scss";
 @import "./global/responsive.scss";
+@import "./global/helper.scss";
+@import "./global/input.scss";
 @import "./components/partials/header.scss";
 @import "./components/partials/footer.scss";
 @import "./components/banner.scss";
@@ -23,13 +25,25 @@
 @import "./components/related-product.scss";
 @import "./components/shopping-cart.scss";
 @import "./components/pagination.scss";
+@import "./components/product-modal.scss";
+@import "./components/products.scss";
+@import "./components/delete-cart-modal.scss";
 
 html,
 body {
     height: 100%;
     box-sizing: border-box;
-    font-family: "Muli", sans-serif;
-    -webkit-font-smoothing: antialiased;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,

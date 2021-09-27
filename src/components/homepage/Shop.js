@@ -10,20 +10,21 @@ import FilterSize from './filter/FilterSize';
 import RenderTag from './filter/RenderTag';
 import ShopHeader from './filter/ShopHeader';
 import ProductItem from './ProductItem';
+import CustomSpinner from './../../UI/CustomSpinner';
 
 const Shop = (props) => {
-
     const dispatch = useDispatch();
     const products = useSelector(state => state.products.products);
+    const loading = useSelector(state => state.products.loading);
     const filter = useSelector(state => state.filter);
-    console.log("filter: ", filter);
+
     useEffect(() => {
         const { filtersApplied, ...subfilter } = filter;
         let filterAll = { ...subfilter, ...filtersApplied };
         dispatch(getProduct(filterAll)).unwrap();
     }, [filter]);
 
-    useEffect(() => {        
+    useEffect(() => {
         dispatch(getCategories());
         dispatch(getBrands());
         dispatch(getTags());
@@ -58,20 +59,30 @@ const Shop = (props) => {
                         </div>
                         <div className="col-lg-9 order-1 order-lg-2">
                             <ShopHeader margin={"bottom"} />
-                            <div className="product-list">
-                                <div className="row">
-                                    {renderProduct(products)}
-                                </div>
-                            </div>
-                            <ShopHeader margin={"top"} />
+                            {!loading
+                                ?
+                                products.length > 0
+                                    ?
+                                    <>
+                                        <div className="product-list">
+                                            <div className="row">
+                                                {renderProduct(products)}
+                                            </div>
+                                        </div>
+                                    </>
+                                    :
+                                    <div className="d-block text-center">
+                                        <span>No product match.</span>
+                                    </div>
+                                :
+                                null
+                            }
                         </div>
                     </div>
                 </div>
             </section>
-
         </>
     );
-
 }
 
 export default Shop;

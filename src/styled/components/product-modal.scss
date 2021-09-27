@@ -1,0 +1,85 @@
+.product-modal {
+    position: relative;
+    &_icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all linear 0.3s;
+        padding: 1rem;
+        cursor: pointer;
+        &:hover {
+            color: $color-yellow;
+            transition: all linear 0.3s;
+        }
+    }
+
+    &_title {
+        margin: 1rem 0;
+        font-weight: bold;
+        &_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+                text-decoration: underline;
+                text-transform: lowercase;
+                cursor: pointer;
+                transition: all linear 0.3s;
+                &:hover {
+                    color: $color-yellow;
+                    transition: all linear 0.3s;
+                }
+            }
+        }
+    }
+
+    &_description {
+        margin-bottom: 2rem;
+    }
+
+    &_sale {
+        font-size: 14px;
+        font-weight: 400;
+        color: #b2b2b2;
+        text-decoration: line-through;
+    }
+
+    &_count {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &_size,
+    &_color {
+        display: flex;
+        &_title {
+            text-decoration: underline;
+            display: block;
+        }
+        &_list {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-left: 2rem;
+            p {
+                &:not(:first-child) {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    &_show-option {
+        height: 30px;
+    }
+
+    &_size {
+        margin-bottom: 1rem;
+    }
+}

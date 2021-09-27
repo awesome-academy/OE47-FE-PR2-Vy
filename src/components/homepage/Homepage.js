@@ -1,9 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
+import RelatedView from './partials/RelatedView';
 
 const Homepage = (props) => {
-
-    var settings = {
+    const slideSettings = {
         dots: false,
         infinite: true,
         arrows: true,
@@ -44,7 +44,6 @@ const Homepage = (props) => {
                     </div>
                 </div>
             </div>
-
             <section className="women-banner spad">
                 <div className="container-fluid">
                     <div className="row">
@@ -65,7 +64,7 @@ const Homepage = (props) => {
                             </div>
                             <div className="product-slider owl-carousel owl-loaded owl-drag">
                                 <div className="owl-stage-outer">
-                                    <Slider {...settings} >
+                                    <Slider {...slideSettings} >
                                         <div className="owl-item col-12">
                                             <div className="product-item">
                                                 <div className="pi-pic">
@@ -412,14 +411,11 @@ const Homepage = (props) => {
                                         </div>
                                     </Slider>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
             <section className="deal-of-week set-bg spad" style={{ backgroundImage: 'url("./images/time-bg.jpg")' }}>
                 <div className="container">
                     <div className="col-lg-6 text-center">
@@ -449,374 +445,8 @@ const Homepage = (props) => {
             <section className="man-banner spad">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-lg-8">
-                            <div className="filter-control">
-                                <ul>
-                                    <li className="active">Clothings</li>
-                                    <li>HandBag</li>
-                                    <li>Shoes</li>
-                                    <li>Accessories</li>
-                                </ul>
-                            </div>
-                            <div className="product-slider owl-carousel owl-loaded owl-drag">
-                                <div className="owl-stage-outer">
-                                    <Slider {...settings} >
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-2.jpg" alt="" />
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Shoes</div>
-                                                    <a href="#">
-                                                        <h5>Guangzhou sweater</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $13.00
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-3.jpg" alt="" />
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Towel</div>
-                                                    <a href="#">
-                                                        <h5>Pure Pineapple</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $34.00
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-4.jpg" alt="" />
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Towel</div>
-                                                    <a href="#">
-                                                        <h5>Converse Shoes</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $34.00
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-1.jpg" alt="" />
-                                                    <div className="sale">Sale</div>
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Coat</div>
-                                                    <a href="#">
-                                                        <h5>Pure Pineapple</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $14.00
-                                                        <span>$35.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-2.jpg" alt="" />
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Shoes</div>
-                                                    <a href="#">
-                                                        <h5>Guangzhou sweater</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $13.00
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-3.jpg" alt="" />
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Towel</div>
-                                                    <a href="#">
-                                                        <h5>Pure Pineapple</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $34.00
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-4.jpg" alt="" />
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Towel</div>
-                                                    <a href="#">
-                                                        <h5>Converse Shoes</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $34.00
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-1.jpg" alt="" />
-                                                    <div className="sale">Sale</div>
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Coat</div>
-                                                    <a href="#">
-                                                        <h5>Pure Pineapple</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $14.00
-                                                        <span>$35.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-2.jpg" alt="" />
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Shoes</div>
-                                                    <a href="#">
-                                                        <h5>Guangzhou sweater</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $13.00
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="owl-item col-12">
-                                            <div className="product-item">
-                                                <div className="pi-pic">
-                                                    <img src="./images/products/man-3.jpg" alt="" />
-                                                    <div className="icon">
-                                                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="w-icon active">
-                                                            <a href="#">
-                                                                <i className="fa fa-shopping-bag" aria-hidden="true"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="quick-view">
-                                                            <a href="#">+ Quick View</a>
-                                                        </li>
-                                                        <li className="w-icon">
-                                                            <a href="#">
-                                                                <i className="fa fa-random" />
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div className="pi-text">
-                                                    <div className="catagory-name">Towel</div>
-                                                    <a href="#">
-                                                        <h5>Pure Pineapple</h5>
-                                                    </a>
-                                                    <div className="product-price">
-                                                        $34.00
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </Slider>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="col-lg-3 offset-lg-1">
-                            <div className="product-large set-bg m-large" style={{ backgroundImage: 'url("./images/products/man-large.jpg")' }}>
-                                <h2>Men’s</h2>
-                                <a href="#">Discover More</a>
-                            </div>
+                        <div className="col-lg-12">
+                            <RelatedView />
                         </div>
                     </div>
                 </div>
@@ -984,12 +614,8 @@ const Homepage = (props) => {
                     </div>
                 </div>
             </section>
-            
-
-
         </>
     );
-
 }
 
 export default Homepage;

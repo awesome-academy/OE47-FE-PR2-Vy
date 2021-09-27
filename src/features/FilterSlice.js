@@ -66,7 +66,6 @@ const filterSlice = createSlice({
             action.payload.length === 0 ?
                 delete state.filtersApplied["size_sizeId_like"]
                 : state.filtersApplied["size_sizeId_like"] = action.payload
-
             state._page = 1;
         },
         clearAllFilter: state => {
@@ -77,8 +76,7 @@ const filterSlice = createSlice({
     }
 })
 
-const { reducer, actions } = filterSlice
-
+const { reducer, actions } = filterSlice;
 export const {
     handleChagePage,
     handleSortPrice,

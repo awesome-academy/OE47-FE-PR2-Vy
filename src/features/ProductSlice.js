@@ -3,10 +3,8 @@ import { getTotalPage } from '../ultils';
 import { getProducts } from './../api/product';
 
 export const getProduct = createAsyncThunk('product/getProduct', async (params, thunkAPI) => {
-
     let totalProduct;
     let totalPage;
-
     let res = await getProducts("products", params);
     if (res && res.status == 200) {
         totalProduct = res.headers["x-total-count"];
