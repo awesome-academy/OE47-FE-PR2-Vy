@@ -8,9 +8,9 @@ import Header from '../homepage/partials/Header';
 import Shop from './../homepage/Shop';
 import Login from './../homepage/Login';
 import Register from './../homepage/Register';
-import ShoppingCart from '../homepage/ShoppingCart/ShoppingCart';
 import Checkout from './../homepage/Checkout';
 import Products from '../homepage/Products';
+import ShoppingCart from './../homepage/ShoppingCart/ShoppingCart';
 
 const HomepageLayout = (props) => {
     return (
