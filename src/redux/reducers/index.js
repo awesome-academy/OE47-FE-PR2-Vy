@@ -5,6 +5,8 @@ import productDetailReducer from './../../features/ProductDetailSlice';
 import cartReducer from './../../features/CartSlice';
 import authReducer from './../../features/AuthSlice';
 import userReducer from './../../features/UserSlice';
+import orderReducer from './../../features/OrderSlice';
+import commentReducer from './../../features/CommentSlice';
 
 export default combineReducers({
     products: productReducer,
@@ -13,4 +15,6 @@ export default combineReducers({
     cart: cartReducer,
     auth: authReducer,
     user: userReducer,
+    order: orderReducer,
+    comment: commentReducer,
 });

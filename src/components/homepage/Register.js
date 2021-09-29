@@ -24,7 +24,6 @@ const Register = () => {
     const [formData, setFormData] = useState(form);
     const status = useSelector(state => state.auth.status);
     const loading = useSelector(state => state.auth.loading);
-    const error = useSelector(state => state.auth.error);
     const history = useHistory();
     const dispatch = useDispatch();
 
@@ -38,7 +37,7 @@ const Register = () => {
     }
 
     useEffect(() => {
-        if (status == 201 && !error) {
+        if (status === 'registerSucess' && !loading) {
             setOpenAlert({
                 open: true,
                 severity: 'success',
@@ -48,14 +47,14 @@ const Register = () => {
                 history.push("/login");
             }, 1000);
         }
-        if (status !== 201 && error) {
+        if (status === 'registerFailed' && !loading) {
             setOpenAlert({
                 open: true,
                 severity: 'error',
                 text: 'Register failed!'
             });
         }
-    }, [status, loading, error]);
+    }, [status, loading]);
 
     const handleSubmit = (e) => {
         e.preventDefault();

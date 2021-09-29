@@ -20,7 +20,6 @@ const Login = () => {
         severity: 'info'
     });
     const status = useSelector(state => state.user.status);
-    const error = useSelector(state => state.user.error);
     const loading = useSelector(state => state.user.loading);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -35,7 +34,7 @@ const Login = () => {
     }
 
     useEffect(() => {
-        if (status == 200 && !error) {
+        if (status === 'loginSucess' && !loading) {
             setOpenAlert({
                 open: true,
                 severity: 'success',
@@ -45,14 +44,14 @@ const Login = () => {
                 history.push("/");
             }, 1000);
         }
-        if (status !== 200 && error) {
+        if (status === 'loginFailed' && !loading) {
             setOpenAlert({
                 open: true,
                 severity: 'error',
-                text: 'LOGIN FAILED> PLEASE TRY AGAIN!'
+                text: 'LOGIN FAILED. PLEASE TRY AGAIN!'
             });
         }
-    }, [status, error, loading]);
+    }, [status, loading]);
 
     const renderForm = (arr) => {
         return arr && arr.map((value, key) => {
