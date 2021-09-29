@@ -76,7 +76,8 @@
     content: "";
 }
 
-.login-form {
+.login-form,
+.register-form {
     .switch-login .or-login:before {
         position: absolute;
         left: 0;
@@ -88,6 +89,7 @@
     }
 
     .group-input {
+        position: relative;
         &.gi-check {
             margin-bottom: 8px;
         }
@@ -146,6 +148,13 @@
                 font-size: 14px;
                 color: #6b6b6b;
             }
+        }
+
+        small {
+            color: red;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
 }

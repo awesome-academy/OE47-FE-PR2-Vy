@@ -1,62 +1,76 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { router } from '../../../route/constants';
-import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import DropdownCart from '../DropdownCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartLocalStorage } from '../../../features/CartSlice';
+import { Grid } from '@mui/material';
+import DropdownCart from '../DropdownCart';
+import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import PersonIcon from '@mui/icons-material/Person';
+import { getProfile } from './../../../features/UserSlice';
 
 const Header = (props) => {
     const cart = useSelector(state => state.cart.products);
     const total = useSelector(state => state.cart.total);
     const loading = useSelector(state => state.cart.loading);
     const dispatch = useDispatch();
+    const profile = useSelector(state => state.user.profile);
 
     useEffect(() => {
         dispatch(getCartLocalStorage());
+        dispatch(getProfile());
     }, []);
 
     return (
         <header className="header-section">
             <div className="header-top">
                 <div className="container">
-                    <div className="ht-left">
-                        <div className="mail-service">
-                            <i className=" fa fa-envelope" />
-                            hello.colorlib@gmail.com
+                    <div className="header-top_container">
+                        <div className="ht-left">
+                            <div className="mail-service">
+                                <i className=" fa fa-envelope" />
+                                hello.colorlib@gmail.com
+                            </div>
+                            <div className="phone-service">
+                                <i className="fa fa-phone" />
+                                +65 11.188.888
+                            </div>
                         </div>
-                        <div className="phone-service">
-                            <i className="fa fa-phone" />
-                            +65 11.188.888
-                        </div>
-                    </div>
-                    <div className="ht-right">
-                        <NavLink to={router.login} className="login-panel">
-                            <PersonIcon />
-                            <span>Login</span>
-                        </NavLink>
-                        <div className="lan-selector">
-                            <img src="/images/flag-1.jpg" className="flag yt fnone" />
-                            <img src="/images/flag-2.jpg" className="flag yu fnone" />
+                        <div className="ht-right">
+                            <div className="lan-selector">
+                                <img src="/images/flag-1.jpg" className="flag yt fnone" />
+                                <img src="/images/flag-2.jpg" className="flag yu fnone" />
+                            </div>
+                            {profile ?
+                                <NavLink to={router.profile} className="login-panel avatar-user">
+                                    <div className="avatar-user_container">
+                                        <img className="avatar-user_img" src="/images/avatar-default.jpg" alt="avatar-default-user" />
+                                    </div>
+                                    <span>{`${profile.lastname} ${profile.firstname}`}</span>
+                                </NavLink>
+                                :
+                                <NavLink to={router.login} className="login-panel">
+                                    <PersonIcon />
+                                    <span>Login</span>
+                                </NavLink>
+                            }
                         </div>
                     </div>
                 </div>
             </div>
             <div className="container">
                 <div className="inner-header">
-                    <div className="row">
-                        <div className="col-lg-2 col-md-2">
+                    <Grid container spacing={2}>
+                        <Grid item xs={2}>
                             <div className="logo">
                                 <NavLink to={router.home}>
                                     <img src="/images/logo.png" alt="" />
                                 </NavLink>
                             </div>
-                        </div>
-                        <div className="col-lg-7 col-md-7">
+                        </Grid>
+                        <Grid item xs={8}>
                             <div className="advanced-search">
-                                <button type="button" className="category-btn">All Categories</button>
                                 <form action="#" className="input-group">
                                     <input type="text" placeholder="What do you need?" />
                                     <button type="button">
@@ -64,8 +78,8 @@ const Header = (props) => {
                                     </button>
                                 </form>
                             </div>
-                        </div>
-                        <div className="col-lg-3 text-right col-md-3">
+                        </Grid>
+                        <Grid item xs={2}>
                             <ul className="nav-right d-flex justify-content-end align-items-center" >
                                 <li className="heart-icon">
                                     <NavLink to={router.wishlist}>
@@ -85,8 +99,8 @@ const Header = (props) => {
                                     />
                                 </li>
                             </ul>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </div>
             </div>
             <div className="nav-item">
@@ -98,7 +112,7 @@ const Header = (props) => {
                             <li><NavLink to={router.blog}>Blog</NavLink></li>
                             <li><NavLink to={router.contact}>Contact</NavLink></li>
                             <li><NavLink to={router.cart}>Shopping Cart</NavLink></li>
-                            <li><NavLink to={router.cart}>My Profile</NavLink></li>
+                            <li><NavLink to={router.profile}>My Profile</NavLink></li>
                         </ul>
                     </nav>
                     <div id="mobile-menu-wrap">

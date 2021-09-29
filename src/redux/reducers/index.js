@@ -4,6 +4,7 @@ import filterReducer from './../../features/FilterSlice';
 import productDetailReducer from './../../features/ProductDetailSlice';
 import cartReducer from './../../features/CartSlice';
 import authReducer from './../../features/AuthSlice';
+import userReducer from './../../features/UserSlice';
 
 export default combineReducers({
     products: productReducer,
@@ -11,4 +12,5 @@ export default combineReducers({
     productDetail: productDetailReducer,
     cart: cartReducer,
     auth: authReducer,
+    user: userReducer,
 });

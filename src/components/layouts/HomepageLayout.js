@@ -1,34 +1,39 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter, Switch } from 'react-router-dom';
 import Blog from '../homepage/Blog';
 import Contact from '../homepage/Contact';
 import Homepage from '../homepage/Homepage';
-import Footer from '../homepage/partials/Footer';
-import Header from '../homepage/partials/Header';
 import Shop from './../homepage/Shop';
 import Login from './../homepage/Login';
 import Register from './../homepage/Register';
 import Checkout from './../homepage/Checkout';
 import Products from '../homepage/Products';
 import ShoppingCart from './../homepage/ShoppingCart/ShoppingCart';
+import PrivateRoute from './../../route/router/PrivateRoute';
+import { PublicRoute } from './../../route/router/PublicRoute';
+import { useEffect } from 'react';
+import Profile from './../homepage/Profile';
 
 const HomepageLayout = (props) => {
     return (
         <>
             <BrowserRouter>
-                <Header />
                 <Switch>
-                    <Route exact path="/" component={Homepage} />
-                    <Route exact path="/shop" component={Shop} />
-                    <Route exact path="/blog" component={Blog} />
-                    <Route exact path="/contact" component={Contact} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/register" component={Register} />
-                    <Route exact path="/cart" component={ShoppingCart} />
-                    <Route exact path="/checkout" component={Checkout} />
-                    <Route exact path="/detail/:id/:name" component={Products} />
+                    <PublicRoute exact path="/" component={Homepage} />
+                    <PublicRoute exact path="/shop" component={Shop} />
+                    <PublicRoute exact path="/blog" component={Blog} />
+                    <PublicRoute exact path="/contact" component={Contact} />
+                    <PublicRoute exact path="/login" component={Login} />
+                    <PublicRoute exact path="/register" component={Register} />
+                    <PublicRoute exact path="/checkout" component={Checkout} />
+                    <PublicRoute exact path="/detail/:id/:name" component={Products} />
+                    <PrivateRoute exact path="/cart" component={ShoppingCart} />
+                    <PrivateRoute
+                        exact
+                        path="/profile"
+                        component={Profile}
+                    />
                 </Switch>
-                <Footer />
             </BrowserRouter>
         </>
     );
