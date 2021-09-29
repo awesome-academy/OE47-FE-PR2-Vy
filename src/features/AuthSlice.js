@@ -4,8 +4,9 @@ import { register } from '../api/auth';
 export const handleRegister = createAsyncThunk('auth/register', async (user) => {
     let res = await register("users", user);
     if (res && res.status == 201) {
-        return res.status;
+        return 'registerSucess';
     }
+    return 'registerFailed';
 });
 
 const authSlice = createSlice({

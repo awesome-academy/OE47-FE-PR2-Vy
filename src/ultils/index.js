@@ -72,3 +72,17 @@ export const validatePhoneReg = (phone) => {
     const re = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
     return re.test(String(phone).toLowerCase());
 }
+
+export const getCurrentDate = () => {
+    let newDate = new Date()
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+    let hour = newDate.getHours();
+    let minutes = newDate.getMinutes();
+    let sec = newDate.getSeconds();
+    let currentDate = `${date < 10 ? `0${date}` : `${date}`}/${month < 10 ? `0${month}` : `${month}`}/${year}`;
+    var time = `${hour < 10 ? `0${hour}` : `${hour}`}:${minutes < 10 ? `0${minutes}` : `${minutes}`}:${sec < 10 ? `0${sec}` : `${sec}`}`;
+    var dateTime = time + ' ' + currentDate;
+    return dateTime;
+}
