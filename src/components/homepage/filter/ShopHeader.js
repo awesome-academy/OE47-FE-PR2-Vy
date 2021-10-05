@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { handleChangeEntriesPerPage, handleSortPrice } from '../../../features/FilterSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { handleChagePage, handleChangeEntriesPerPage, handleSortPrice } from '../../../features/FilterSlice';
 import Paginations from '../partials/Pagination';
 
 const ShopHeader = (props) => {
     const [sorting, setSorting] = useState();
     const [entriesPerPage, setEntriesPerPage] = useState();
     const dispatch = useDispatch();
+    const totalPage = useSelector(state => state.products.totalPage);
+    const page = useSelector(state => state.filter._page);
 
     const handleSorting = (e) => {
         if (e.target.value !== sorting) {
@@ -20,6 +22,10 @@ const ShopHeader = (props) => {
             setEntriesPerPage(e.target.value);
             dispatch(handleChangeEntriesPerPage(e.target.value));
         }
+    }
+
+    const handleChangePage = (e) => {
+        dispatch(handleChagePage(e));
     }
 
     return (
@@ -41,7 +47,11 @@ const ShopHeader = (props) => {
                     </div>
                 </div>
                 <div className="col-lg-5 col-md-5 text-right">
-                    <Paginations />
+                    <Paginations
+                        totalPage={totalPage}
+                        page={page}
+                        handleChangePage={handleChangePage}
+                    />
                 </div>
             </div>
         </div>
