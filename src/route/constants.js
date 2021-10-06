@@ -1,4 +1,4 @@
-export const router = {
+export const routerHomepage = {
     home: "/",
     shop: "/shop",
     blog: "/blog",
@@ -9,4 +9,11 @@ export const router = {
     register: "/register",
     login: "/login",
     profile: "/profile"
+};
+
+export const routerAdmin = {
+    home: "/admin",
+    manageOrders: "/admin/manage-orders",
+    manageProducts: "/admin/manage-products",
+    manageUsers: "/admin/manage-users"
 };

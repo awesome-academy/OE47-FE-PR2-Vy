@@ -1,8 +1,8 @@
-import React from 'react';
-import { Modal, Box, Fade, Backdrop, Button } from '@mui/material';
+import React, { } from 'react';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import { Modal, Fade, Box, Button, Backdrop } from '@mui/material';
 
-const DeleteCartModal = ({ open, product, setOpen, deleteItem }) => {
+const DeleteModal = ({ setOpen, open, deleteItem }) => {
     const style = {
         position: 'absolute',
         top: '50%',
@@ -37,7 +37,7 @@ const DeleteCartModal = ({ open, product, setOpen, deleteItem }) => {
                     </div>
                     <div className="delete-modal_container">
                         <p className="text-center mb-8">
-                            Are you sure you want to remove {product.name}?
+                            Are you sure you want to remove this item ?
                         </p>
                         <div className="delete-modal_btn-container">
                             <Button className="btn-cancel" onClick={() => setOpen(false)}>
@@ -54,4 +54,4 @@ const DeleteCartModal = ({ open, product, setOpen, deleteItem }) => {
     );
 }
 
-export default DeleteCartModal;
+export default DeleteModal;

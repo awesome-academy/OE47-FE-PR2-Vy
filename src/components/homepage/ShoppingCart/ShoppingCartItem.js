@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { formatPrice, textCapitalize } from '../../../ultils';
+import { formatPrice } from '../../../ultils';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useDispatch } from 'react-redux';
-import DeleteCartModal from './DeleteCartModal';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 import { deleteItem, handleChangeQuantity, setCartTotal, setCarts, getTotalByCart } from '../../../features/CartSlice';
 import { ButtonGroup } from '@mui/material';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import CustomizedSnackbars from './../../alert/index';
+import DeleteModal from '../DeleteModal';
 
-const ShoppingCartItem = ({product, color, size, quantity}) => {
+const ShoppingCartItem = ({product, size, quantity}) => {
     const { image } = product;
     const [openModal, setOpenModal] = useState(false);
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const ShoppingCartItem = ({product, color, size, quantity}) => {
     const [total, setTotal] = useLocalStorage('total', 0);
     const [quantityState, setQuantityState] = useState();
     const [openAlert, setOpenAlert] = useState(false);
-    const params = { product, color, size, quantity };
+    const params = { product, size, quantity };
 
     useEffect(() => {
         setQuantityState(quantity);
@@ -69,7 +69,6 @@ const ShoppingCartItem = ({product, color, size, quantity}) => {
                     <h5>{product.name}</h5>
                 </td>
                 <td>{size}</td>
-                <td>{textCapitalize(color)}</td>
                 <td className="p-price">{formatPrice(product.price)}</td>
                 <td className="qua-col">
                     <div className="quantity">
@@ -91,7 +90,7 @@ const ShoppingCartItem = ({product, color, size, quantity}) => {
                     <DeleteIcon onClick={() => setOpenModal(true)} />
                 </td>
             </tr>
-            <DeleteCartModal
+            <DeleteModal
                 product={product}
                 open={openModal}
                 setOpen={setOpenModal}
@@ -105,7 +104,6 @@ const ShoppingCartItem = ({product, color, size, quantity}) => {
             />
         </>
     );
-
 }
 
 export default ShoppingCartItem;
