@@ -269,6 +269,12 @@
 
             h5 {
                 color: $color-primary;
+
+                em {
+                    background-color: $color-yellow;
+                    font-style: normal;
+                    color: $color-black;
+                }
             }
         }
 

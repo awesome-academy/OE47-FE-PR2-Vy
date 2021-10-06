@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BootstrapButton } from './../../../UI/BootstrapButton';
-import { formatPrice, textCapitalize } from './../../../ultils/index';
+import { formatPrice } from './../../../ultils/index';
 import { Grid, TextField, Modal, Box, Fade, Backdrop, styled, Button } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -8,8 +8,9 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import _ from 'lodash';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 import { addToBag, getTotalByCart, setCarts, setCartTotal } from '../../../features/CartSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CustomizedSnackbars from './../../alert/index';
+import { getWishlist, setToWishlist } from '../../../features/UserSlice';
 
 export const CustomButtonCount = styled(Button)({
     boxShadow: 'none',
@@ -44,29 +45,40 @@ const ProductModal = (props) => {
     const { product } = props;
     const [count, setCount] = useState(1);
     const [size, setSize] = useState();
-    const [color, setColor] = useState();
     const [cart, setCart] = useLocalStorage('cart', []);
     const [total, setTotal] = useLocalStorage('total', 0);
     const dispatch = useDispatch();
-    const [openAlert, setOpenAlert] = useState(false);
+    const [openAlert, setOpenAlert] = useState({
+        open: false,
+        text: '',
+        severity: 'info'
+    });
+    const wishlist = useSelector(state => state.user.wishlist);
+
+    useEffect(() => {
+        dispatch(getWishlist());
+    }, []);
 
     useEffect(() => {
         product.size && setSize(product.size[0]);
-        product.color && setColor(product.color[0]);
     }, [product]);
 
-    const addToCart = (product, size, color, count) => {
-        let params = { product, size, color, count };
+    const addToCart = (product, size, count) => {
+        let params = { product, size, count };
         let cartTemp = addToBag(params);
         let totalTemp = getTotalByCart(addToBag(params));
         setTotal(totalTemp);
         setCart(cartTemp);
         dispatch(setCarts(cartTemp));
         dispatch(setCartTotal(totalTemp));
-        setOpenAlert(true);
+        setOpenAlert({
+            open: true,
+            severity: 'success',
+            text: `Add ${product.name} to your cart success!`
+        });
         setTimeout(() => {
             handleClose();
-        }, 1000);
+        }, 800);
     }
 
     const style = {
@@ -86,6 +98,24 @@ const ProductModal = (props) => {
 
     const handleClose = () => {
         props.setOpen(false);
+    }
+
+    const handleAddToWishlist = () => {
+        dispatch(setToWishlist(product));
+        setOpenAlert({
+            open: true,
+            severity: 'success',
+            text: `Add ${product.name} to your wishlist success!`
+        });
+    }
+
+    const handleDelete = (product) => {
+        dispatch(setToWishlist(product));
+        setOpenAlert({
+            open: true,
+            severity: 'success',
+            text: 'DELETE SUCCESS!'
+        });
     }
 
     return (
@@ -113,11 +143,15 @@ const ProductModal = (props) => {
                                 </div>
                                 <div className="product-modal_title_container">
                                     <h3 className="product-modal_title">{product.name}</h3>
-                                    <span>add to wishlist</span>
+                                    {wishlist.some(val => val.id === product.id)
+                                        ?
+                                        <span onClick={() => handleDelete(product)}>remove from wishlist</span>
+                                        :
+                                        <span onClick={() => handleAddToWishlist(product)}>add to wishlist</span>
+                                    }
                                 </div>
                                 <div className="product-modal_show-option">
-                                    {size && <span>Size: {size}. </span>}
-                                    {color && <span>Color: {textCapitalize(color)}.</span>}
+                                    {size && <span>Size: {size}</span>}
                                 </div>
                                 <p className="product-modal_description mb-8">{product.description}</p>
 
@@ -131,24 +165,6 @@ const ProductModal = (props) => {
                                                 <p key={key}>
                                                     <input type="radio" id={value} value={value} onChange={(e) => setSize(e.target.value)} name="size" checked={size === value ? "checked" : null} />
                                                     <label for={value}>{value}</label>
-                                                </p>
-
-                                            )
-                                        })}
-                                    </ul>
-                                </div>
-                                <div className="product-modal_color">
-                                    <p className="product-modal_color_title">
-                                        Choose Color (require):
-                                    </p>
-                                    <ul className="list-unstyled list-inline product-modal_color_list">
-                                        {product.color.map((value, key) => {
-                                            return (
-                                                <p key={key}>
-                                                    <input type="radio" id={value} name="color" value={value} checked={color === value ? "checked" : null} onChange={(e) => setColor(e.target.value)} />
-                                                    <label for={value}>
-                                                        {textCapitalize(value)}
-                                                    </label>
                                                 </p>
                                             )
                                         })}
@@ -189,7 +205,7 @@ const ProductModal = (props) => {
                                         </CustomButtonCount>
                                     </div>
                                 </div>
-                                <BootstrapButton className="mt-4" variant="contained" onClick={() => addToCart(product, size, color, count)} >
+                                <BootstrapButton className="mt-4" variant="contained" onClick={() => addToCart(product, size, count)} >
                                     {`${formatPrice(getTotal())} - Add To Cart`}
                                 </BootstrapButton>
                             </Grid>
@@ -198,9 +214,9 @@ const ProductModal = (props) => {
                 </Fade>
             </Modal>
             <CustomizedSnackbars
-                message={`Add ${product.name} success to your cart !`}
-                severity="success"
-                open={openAlert}
+                message={openAlert.text}
+                severity={openAlert.severity}
+                open={openAlert.open}
                 setOpen={setOpenAlert}
             />
         </>

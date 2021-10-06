@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { register } from '../api/auth';
+import { authentication } from '../api/auth';
 
 export const handleRegister = createAsyncThunk('auth/register', async (user) => {
-    let res = await register("users", user);
+    let res = await authentication("users", user);
     if (res && res.status == 201) {
         return 'registerSucess';
     }

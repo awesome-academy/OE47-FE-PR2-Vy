@@ -15,10 +15,10 @@ import useLocalStorage from '../../hooks/useLocalStorage';
 import { setCarts, addToBag, getTotalByCart, setCartTotal } from '../../features/CartSlice';
 import _ from 'lodash';
 import CustomizedSnackbars from '../alert';
+import Comment from './Comment';
 
-const Products = () => {
+const Products = ({ profile }) => {
     const [sizeChoose, setSizeChoose] = useState();
-    const [colorChoose, setColorChoose] = useState();
     const [count, setCount] = useState(1);
     const [index, setIndex] = useState("1");
     const { id } = useParams();
@@ -27,9 +27,13 @@ const Products = () => {
     const loading = useSelector(state => state.productDetail.loading);
     const [cart, setCart] = useLocalStorage('cart', []);
     const [total, setTotal] = useLocalStorage('total', 0);
-    const [openAlert, setOpenAlert] = useState(false);
+    const [openAlert, setOpenAlert] = useState({
+        open: false,
+        text: '',
+        severity: 'info'
+    });
 
-    const { image, detail, color, size } = product;
+    const { image, size } = product;
 
     useEffect(() => {
         dispatch(getProductDetails(id));
@@ -37,26 +41,25 @@ const Products = () => {
 
     useEffect(() => {
         product.size && setSizeChoose(product.size[0]);
-        product.color && setColorChoose(product.color[0]);
     }, [product]);
 
     const handleChange = (event, newValue) => {
         setIndex(newValue);
     };
 
-    const addToCart = (product, size, color, count) => {
-        let params = { product, size, color, count };
+    const addToCart = (product, size, count) => {
+        let params = { product, size, count };
         let cartTemp = addToBag(params);
         let totalTemp = getTotalByCart(addToBag(params));
         setTotal(totalTemp);
         setCart(cartTemp);
         dispatch(setCarts(cartTemp));
         dispatch(setCartTotal(totalTemp));
-        setOpenAlert(true);
-    }
-
-    const isShowButton = () => {
-        return sizeChoose && colorChoose;
+        setOpenAlert({
+            open: true,
+            severity: 'success',
+            text: `Add ${product.name} to your cart success!`
+        });
     }
 
     return (
@@ -82,30 +85,9 @@ const Products = () => {
                                 <h3 className="product-detail_title">
                                     {product.name}
                                 </h3>
-                                <p className="product-detail_description">
-                                    {product.brandId}
-                                </p>
                                 <p className="product-detail_price">
                                     {formatPrice(product.price)}
                                 </p>
-                                <div className="product-detail_color_container">
-                                    <p className="product-detail_color_title">
-                                        Color:
-                                    </p>
-                                    <ul className="list-unstyled list-inline product-detail_color_list">
-                                        {color && color.map((value, key) => {
-                                            return (
-                                                <p key={key}>
-                                                    <input type="radio" id={value} name="colorChoose" value={value} checked={colorChoose === value ? "checked" : null} onChange={(e) => setColorChoose(e.target.value)} />
-                                                    <label for={value}>
-                                                        {textCapitalize(value)}
-                                                    </label>
-                                                </p>
-                                            )
-                                        })
-                                        }
-                                    </ul>
-                                </div>
                                 <div className="product-detail_size_container">
                                     <p className="product-detail_size_title">
                                         Size:
@@ -134,7 +116,7 @@ const Products = () => {
                                             <AddIcon className="icon" sx={{ color: '#e7ab3c' }} />
                                         </ButtonGroup>
                                     </div>
-                                    <BootstrapButton className="product-detail_btn-add" variant="contained" disabled={!isShowButton()} onClick={() => addToCart(product, sizeChoose, colorChoose, count)} >
+                                    <BootstrapButton className="product-detail_btn-add" variant="contained" onClick={() => addToCart(product, sizeChoose, count)} >
                                         ADD TO BAG
                                     </BootstrapButton>
                                 </div>
@@ -155,15 +137,6 @@ const Products = () => {
                                                 {product.description}
                                             </TabPanel>
                                             <TabPanel value="2">
-                                                <ul className="product-detail_detail-list">
-                                                    {detail && Object.keys(detail).map((value, key) => {
-                                                        return (
-                                                            <li className="product-detail_detail-item" key={key}>
-                                                                {textCapitalize(value)} : {textCapitalize(detail[value])}
-                                                            </li>
-                                                        )
-                                                    })}
-                                                </ul>
                                                 <p className="product-detail_detail-note">{product.note}</p>
                                                 <Divider />
                                                 <p className="product-detail_shipping-title">
@@ -181,14 +154,18 @@ const Products = () => {
                                 </div>
                             </Grid>
                         </Grid>
+                        <Comment
+                            id={product.id}
+                            profile={profile}
+                        />
                         <RelatedView />
                     </Container>
                 </div>
             }
             <CustomizedSnackbars
-                message={`Add ${product.name} success to your cart !`}
-                severity="success"
-                open={openAlert}
+                message={openAlert.text}
+                severity={openAlert.severity}
+                open={openAlert.open}
                 setOpen={setOpenAlert}
             />
         </>
