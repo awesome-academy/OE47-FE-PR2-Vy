@@ -26,7 +26,7 @@ const FilterSize = () => {
         return arr && arr.map((value, key) => {
             return (
                 <Chip key={key} label={value.name} color="warning" variant={
-                    !(sizeArr.some(val => val === value.id)) ? "outlined" : "default"} onClick={() => handleFilterSize(value.id)} />
+                    !(sizeArr.some(val => val === value.name)) ? "outlined" : "default"} onClick={() => handleFilterSize(value.name)} />
             )
         });
     }
@@ -34,7 +34,7 @@ const FilterSize = () => {
     return (
         <div className="filter-widget">
             <h4 className="fw-title">Size</h4>
-            <Stack direction="row" className="fw-size-choose" spacing={1}>
+            <Stack direction="row" className="fw-size-choose mt-2" spacing={1}>
                 {renderSize(size)}
             </Stack>
         </div>

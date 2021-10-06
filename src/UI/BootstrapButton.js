@@ -7,7 +7,6 @@ export const BootstrapButton = styled(Button)({
     fontSize: 16,
     padding: '6px 12px',
     border: '1px solid',
-    width: '100%',
     lineHeight: 1.5,
     backgroundColor: '#ffffff',
     borderColor: '#e7ab3c',
