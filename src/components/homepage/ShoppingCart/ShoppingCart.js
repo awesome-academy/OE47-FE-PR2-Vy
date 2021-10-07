@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import ShoppingCartItem from './ShoppingCartItem';
 import { getCartLocalStorage } from '../../../features/CartSlice';
 import { NavLink } from 'react-router-dom';
-import { router } from '../../../route/constants';
+import { routerHomepage } from '../../../route/constants';
 
 const ShoppingCart = () => {
     const dispatch = useDispatch();
@@ -19,10 +19,9 @@ const ShoppingCart = () => {
 
     const renderCartItem = (cart) => {
         return cart.length > 0 ? cart.map((value, key) => {
-            const { product, color, size, quantity } = value;
+            const { product, size, quantity } = value;
             return (
                 <ShoppingCartItem
-                    color={color}
                     size={size}
                     product={product}
                     quantity={quantity}
@@ -50,7 +49,6 @@ const ShoppingCart = () => {
                                         <th>Image</th>
                                         <th className="p-name">Product Name</th>
                                         <th>Size</th>
-                                        <th>Color</th>
                                         <th>Price</th>
                                         <th>Quantity</th>
                                         <th>Total</th>
@@ -65,7 +63,7 @@ const ShoppingCart = () => {
                         <div className="row">
                             <div className="col-lg-4">
                                 <div className="cart-buttons">
-                                    {cartProduct.length === 0 && <NavLink to={router.shop} className="primary-btn continue-shop active">Continue shopping</NavLink>}
+                                    {cartProduct.length === 0 && <NavLink to={routerHomepage.shop} className="primary-btn continue-shop active">Continue shopping</NavLink>}
                                 </div>
                                 <div className="discount-coupon">
                                     <h6>Discount Codes</h6>
@@ -81,7 +79,7 @@ const ShoppingCart = () => {
                                         <li className="subtotal">Subtotal <span>{formatPrice(totalProduct)}</span></li>
                                         <li className="cart-total">Total <span>{formatPrice(totalProduct)}</span></li>
                                     </ul>
-                                    <NavLink to={router.checkout} className="proceed-btn">PROCEED TO CHECK OUT</NavLink>
+                                    <NavLink to={routerHomepage.checkout} className="proceed-btn">PROCEED TO CHECK OUT</NavLink>
                                 </div>
                             </div>
                         </div>
@@ -89,9 +87,7 @@ const ShoppingCart = () => {
                 </div>
             </div>
         </section>
-
     );
-
 }
 
 export default ShoppingCart;
