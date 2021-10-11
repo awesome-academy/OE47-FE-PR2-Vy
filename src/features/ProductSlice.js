@@ -30,13 +30,6 @@ export const getBrands = createAsyncThunk('product/getBrands', async () => {
     }
 })
 
-export const getTags = createAsyncThunk('product/getTags', async () => {
-    let res = await getProducts("tags");
-    if (res && res.status == 200) {
-        return res.data;
-    }
-})
-
 export const getSize = createAsyncThunk('product/getSize', async () => {
     let res = await getProducts("size");
     if (res && res.status == 200) {
@@ -54,7 +47,6 @@ const productSlice = createSlice({
         totalPage: '',
         categories: [],
         brands: [],
-        tags: [],
         size: []
     },
     reducers: {},
@@ -69,7 +61,6 @@ const productSlice = createSlice({
         [getProduct.fulfilled]: (state, action) => {
             state.loading = false;
             state.products = action.payload.data;
-            state.totalProduct = parseInt(action.payload.totalProduct);
             state.totalPage = parseInt(action.payload.totalPage);
         },
         [getCategories.pending]: (state) => {
@@ -93,17 +84,6 @@ const productSlice = createSlice({
         [getBrands.fulfilled]: (state, action) => {
             state.loading = false;
             state.brands = action.payload;
-        },
-        [getTags.pending]: (state) => {
-            state.loading = true;
-        },
-        [getTags.rejected]: (state, action) => {
-            state.loading = false;
-            state.error = action.error;
-        },
-        [getTags.fulfilled]: (state, action) => {
-            state.loading = false;
-            state.tags = action.payload;
         },
         [getSize.pending]: (state) => {
             state.loading = true;

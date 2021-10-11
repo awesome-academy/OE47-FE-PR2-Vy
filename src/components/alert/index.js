@@ -7,12 +7,12 @@ const CustomizedSnackbars = (props) => {
         if (reason === 'clickaway') {
             return;
         }
-        props.setOpen(false);
+        props.setOpen(prev => ({ ...prev, open: false }));
     };
 
     return (
         <Stack spacing={2} sx={{ width: '100%' }}>
-            <Snackbar open={props.open} autoHideDuration={6000} onClose={handleClose}>
+            <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'left' }} open={props.open} autoHideDuration={6000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity={props.severity} sx={{ width: '100%' }}>
                     {props.message}
                 </Alert>
