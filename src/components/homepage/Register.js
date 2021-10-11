@@ -2,14 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { handleRegister } from '../../features/AuthSlice';
-import { router } from '../../route/constants';
+import { routerHomepage } from '../../route/constants';
 import CustomizedSnackbars from './../alert/index';
-import { validateEmailReg } from './../../ultils/index';
+import { validateEmailReg, validatePhoneReg } from './../../ultils/index';
 import { useHistory } from "react-router-dom";
 
 const form = [
     { name: "firstname", type: "text", label: "Firstname", error: '' },
     { name: "lastname", type: "text", label: "Lastname", error: '' },
+    { name: "phone", type: "number", label: "Phone", error: '' },
+    { name: "street_address", type: "text", label: "Street Address", error: '' },
+    { name: "district", type: "text", label: "District", error: '' },
+    { name: "city", type: "text", label: "City", error: '' },
     { name: "email", type: "text", label: "Email address", error: '' },
     { name: "password", type: "password", label: "Password", error: '' },
     { name: "confirmPassword", type: "password", label: "Confirm password", error: '' }
@@ -23,7 +27,7 @@ const Register = () => {
     });
     const [formData, setFormData] = useState(form);
     const status = useSelector(state => state.auth.status);
-    const loading = useSelector(state => state.auth.loading);
+    const [isRevealPwd, setIsRevealPwd] = useState(false);
     const history = useHistory();
     const dispatch = useDispatch();
 
@@ -37,7 +41,7 @@ const Register = () => {
     }
 
     useEffect(() => {
-        if (status === 'registerSucess' && !loading) {
+        if (status === 'registerSucess') {
             setOpenAlert({
                 open: true,
                 severity: 'success',
@@ -45,16 +49,16 @@ const Register = () => {
             });
             setTimeout(() => {
                 history.push("/login");
-            }, 1000);
+            }, 800);
         }
-        if (status === 'registerFailed' && !loading) {
+        if (status === 'registerFailed') {
             setOpenAlert({
                 open: true,
                 severity: 'error',
                 text: 'Register failed!'
             });
         }
-    }, [status, loading]);
+    }, [status]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -63,7 +67,12 @@ const Register = () => {
             lastname: e.target.lastname.value,
             email: e.target.email.value,
             password: e.target.password.value,
-            active: true
+            phone: e.target.phone.value,
+            street_address: e.target.street_address.value,
+            district: e.target.district.value,
+            city: e.target.city.value,
+            active: "active",
+            role: "user"
         }
         if (!checkConditionField(data)) {
             return setOpenAlert({
@@ -88,6 +97,9 @@ const Register = () => {
         switch (e.target.name) {
             case "firstname":
             case "lastname":
+            case "street_address":
+            case "district":
+            case "city":
                 !e.target.value ?
                     temp[indexProduct].error = [`${label} can't be blank!`]
                     :
@@ -97,6 +109,13 @@ const Register = () => {
                 !validateEmailReg(e.target.value)
                     ?
                     temp[indexProduct].error = "Email is invalid!"
+                    :
+                    temp[indexProduct].error = '';
+                break;
+            case "phone":
+                !validatePhoneReg(e.target.value)
+                    ?
+                    temp[indexProduct].error = "Phone is invalid!"
                     :
                     temp[indexProduct].error = '';
                 break;
@@ -118,7 +137,11 @@ const Register = () => {
             return (
                 <div className="group-input" key={key}>
                     <label htmlFor={value.label}>{value.label} *</label>
-                    <input type={value.type} name={value.name} onChange={(e) => handleChangeInput(e, value.label)} />
+                    <input
+                        type={(value.name == "password" || value.name == "confirmPassword") && !isRevealPwd ? "password" : "text"}
+                        name={value.name}
+                        onChange={(e) => handleChangeInput(e, value.label)}
+                    />
                     {value.error && <small>{value.error}</small>}
                 </div>
             )
@@ -135,10 +158,12 @@ const Register = () => {
                                 <h2>Register</h2>
                                 <form onSubmit={handleSubmit}>
                                     {renderForm(formData)}
+                                    <span onClick={() => setIsRevealPwd(prevState => !prevState)}
+                                    >{isRevealPwd ? "Hide password" : "Show password"}</span>
                                     <button type="submit" className="site-btn login-btn">Sign Up</button>
                                 </form>
                                 <div className="switch-login">
-                                    <NavLink to={router.login} className="or-login">Or Login</NavLink>
+                                    <NavLink to={routerHomepage.login} className="or-login">Or Login</NavLink>
                                 </div>
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { router } from '../../route/constants';
+import { routerHomepage } from '../../route/constants';
 import { validateEmailReg } from '../../ultils';
 import CustomizedSnackbars from '../alert';
 import { useHistory } from 'react-router-dom';
@@ -14,13 +14,13 @@ const form = [
 
 const Login = () => {
     const [formData, setFormData] = useState(form);
+    const [isRevealPwd, setIsRevealPwd] = useState(false);
     const [openAlert, setOpenAlert] = useState({
         open: false,
         text: '',
         severity: 'info'
     });
     const status = useSelector(state => state.user.status);
-    const loading = useSelector(state => state.user.loading);
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -34,7 +34,7 @@ const Login = () => {
     }
 
     useEffect(() => {
-        if (status === 'loginSucess' && !loading) {
+        if (status === 'loginSucess') {
             setOpenAlert({
                 open: true,
                 severity: 'success',
@@ -42,24 +42,30 @@ const Login = () => {
             });
             setTimeout(() => {
                 history.push("/");
-            }, 1000);
+            }, 800);
         }
-        if (status === 'loginFailed' && !loading) {
+        if (status === 'loginFailed') {
             setOpenAlert({
                 open: true,
                 severity: 'error',
                 text: 'LOGIN FAILED. PLEASE TRY AGAIN!'
             });
         }
-    }, [status, loading]);
+    }, [status]);
 
     const renderForm = (arr) => {
         return arr && arr.map((value, key) => {
             return (
                 <div className="group-input" key={key}>
                     <label htmlFor={value.label}>{value.label} *</label>
-                    <input type={value.type} name={value.name} onChange={handleChangeInput} />
+                    <input
+                        type={value.name == "password" && !isRevealPwd ? "password" : "text"}
+                        name={value.name}
+                        onChange={handleChangeInput}
+                    />
                     {value.error && <small>{value.error}</small>}
+                    {value.name == "password" && <span onClick={() => setIsRevealPwd(prevState => !prevState)}
+                    >{isRevealPwd ? "Hide password" : "Show password"}</span>}
                 </div>
             )
         })
@@ -95,7 +101,7 @@ const Login = () => {
                                     <button type="submit" className="site-btn login-btn">Sign In</button>
                                 </form>
                                 <div className="switch-login">
-                                    <NavLink to={router.register} className="or-login">Or Create An Account</NavLink>
+                                    <NavLink to={routerHomepage.register} className="or-login">Or Create An Account</NavLink>
                                 </div>
                             </div>
                         </div>

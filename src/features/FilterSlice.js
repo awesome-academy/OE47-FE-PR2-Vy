@@ -64,9 +64,12 @@ const filterSlice = createSlice({
         },
         handleFilterBySize: (state, action) => {
             action.payload.length === 0 ?
-                delete state.filtersApplied["size_sizeId_like"]
-                : state.filtersApplied["size_sizeId_like"] = action.payload
+                delete state.filtersApplied["size_like"]
+                : state.filtersApplied["size_like"] = action.payload
             state._page = 1;
+        },
+        handleSearchName: (state, action) => {
+            state.filtersApplied["name_like"] = action.payload
         },
         clearAllFilter: state => {
             state.filtersApplied = {};
@@ -86,6 +89,7 @@ export const {
     handleFilterBrand,
     handlerFilterByPrice,
     handleFilterBySize,
+    handleSearchName,
     clearAllFilter
 } = actions
 

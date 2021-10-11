@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getCartLocalStorage } from './../../features/CartSlice';
 import CustomSpinner from './../../UI/CustomSpinner';
 import { getCurrentDate, formatPrice, validatePhoneReg } from './../../ultils/index';
-import { getProfile } from '../../features/UserSlice';
 import CustomizedSnackbars from '../alert';
 import { createOrderAction, resetOrder } from './../../features/OrderSlice';
 import { useHistory } from 'react-router-dom';
@@ -21,9 +20,9 @@ const payment = [
     { value: "cash", label: "Cash" },
     { value: "paypal", label: "Paypal" },
     { value: "visa/master_card", label: "VISA / MASTER CARD" }
-]
+];
 
-const Checkout = () => {
+const Checkout = ({ profile }) => {
     const [formData, setFormData] = useState(form);
     const [openAlert, setOpenAlert] = useState({
         open: false,
@@ -36,13 +35,11 @@ const Checkout = () => {
     const loading = useSelector(state => state.cart.loading);
     const status = useSelector(state => state.order.status);
     const dispatch = useDispatch();
-    const profile = useSelector(state => state.user.profile);
     const history = useHistory();
 
     useEffect(() => {
-        dispatch(getProfile());
         dispatch(getCartLocalStorage());
-        if (status === 'orderSuccess' && !loading) {
+        if (status === 'orderSuccess') {
             setOpenAlert({
                 open: true,
                 severity: "success",
@@ -55,7 +52,7 @@ const Checkout = () => {
                 history.push("/profile");
             }, 1500);
         }
-        if (status === 'orderFailed' && !loading) {
+        if (status === 'orderFailed') {
             setOpenAlert({
                 open: true,
                 severity: "error",
@@ -72,7 +69,7 @@ const Checkout = () => {
                 history.push("/shop");
             }, 2000);
         }
-    }, [status, loading]);
+    }, [status]);
 
     const renderField = (arr) => {
         return arr.map((value, key) => {

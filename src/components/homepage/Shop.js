@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCategories, getProduct, getTags, getBrands, getSize } from '../../features/ProductSlice';
-import Breadcrumb from './Breadcrumb';
+import { getCategories, getProduct, getBrands, getSize } from '../../features/ProductSlice';
+
 import ClearButton from './filter/ClearButton';
 import FilterBrand from './filter/FilterBrand';
 import FilterCategories from './filter/FilterCategories';
 import FilterPrice from './filter/FilterPrice';
 import FilterSize from './filter/FilterSize';
-import RenderTag from './filter/RenderTag';
 import ShopHeader from './filter/ShopHeader';
 import ProductItem from './ProductItem';
-import CustomSpinner from './../../UI/CustomSpinner';
 
-const Shop = (props) => {
+const Shop = () => {
     const dispatch = useDispatch();
     const products = useSelector(state => state.products.products);
     const loading = useSelector(state => state.products.loading);
@@ -27,7 +25,6 @@ const Shop = (props) => {
     useEffect(() => {
         dispatch(getCategories());
         dispatch(getBrands());
-        dispatch(getTags());
         dispatch(getSize());
     }, []);
 
@@ -45,7 +42,6 @@ const Shop = (props) => {
 
     return (
         <>
-            <Breadcrumb />
             <section className="product-shop spad">
                 <div className="container">
                     <div className="row">
@@ -55,7 +51,6 @@ const Shop = (props) => {
                             <FilterBrand />
                             <FilterPrice />
                             <FilterSize />
-                            <RenderTag />
                         </div>
                         <div className="col-lg-9 order-1 order-lg-2">
                             <ShopHeader margin={"bottom"} />
