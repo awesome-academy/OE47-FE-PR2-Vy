@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { createOrder, getOrders } from './../api/order';
+import { createOrder, getOrdersByUser } from './../api/order';
 
 export const createOrderAction = createAsyncThunk('order/createOrderAction', async (params) => {
     let res = await createOrder("orders", params);
@@ -9,8 +9,8 @@ export const createOrderAction = createAsyncThunk('order/createOrderAction', asy
     return 'orderFailed';
 });
 
-export const getOrdersByUser = createAsyncThunk('order/getOrdersByUser', async (params) => {
-    let res = await getOrders("orders", params);
+export const getOrdersByUserAction = createAsyncThunk('order/getOrdersByUser', async (params) => {
+    let res = await getOrdersByUser("orders", params);
     if (res && res.status == 200) {
         return res.data;
     }
@@ -43,14 +43,14 @@ const orderSlice = createSlice({
             state.loading = false;
             state.status = action.payload;
         },
-        [getOrdersByUser.pending]: (state) => {
+        [getOrdersByUserAction.pending]: (state) => {
             state.loading = true;
         },
-        [getOrdersByUser.rejected]: (state, action) => {
+        [getOrdersByUserAction.rejected]: (state, action) => {
             state.loading = false;
             state.error = action.error.message;
         },
-        [getOrdersByUser.fulfilled]: (state, action) => {
+        [getOrdersByUserAction.fulfilled]: (state, action) => {
             state.loading = false;
             state.orders = action.payload;
         }

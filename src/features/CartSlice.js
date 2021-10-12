@@ -14,12 +14,12 @@ export const getTotalByCart = (cart) => {
 }
 
 export const isExist = (item1, item2) => {
-    return _.isEqual(item1.product, item2.product) && _.isEqual(item1.size, item2.size) && _.isEqual(item1.color, item2.color);
+    return _.isEqual(item1.product, item2.product) && _.isEqual(item1.size, item2.size);
 }
 
 export const addToBag = (params) => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const { product, size, color, count } = params;
+    const { product, size, count } = params;
     let flag = false;
     for (let i = 0; i < cart.length; i++) {
         if (isExist(cart[i], params)) {
@@ -30,7 +30,7 @@ export const addToBag = (params) => {
         }
     }
     if (!flag) {
-        cart = [...cart, { product, size, color, quantity: count }];
+        cart = [...cart, { product, size, quantity: count }];
     }
     return cart;
 };
