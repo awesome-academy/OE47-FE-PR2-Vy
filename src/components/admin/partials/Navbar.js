@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { handleLogoutUser } from './../../../features/UserSlice';
 import CustomizedSnackbars from '../../alert';
-import { useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
+import { routerHomepage } from './../../../route/constants';
 
 const Navbar = ({ profile }) => {
     const dispatch = useDispatch();
@@ -28,7 +29,7 @@ const Navbar = ({ profile }) => {
     return (
         <>
             <nav className="sb-topnav navbar navbar-expand navbar-dark bg-dark justify-content-between">
-                <a className="navbar-brand ps-3" href="index.html">E-commerce</a>
+                <NavLink className="navbar-brand ps-3" to={routerHomepage.home}>E-commerce</NavLink>
                 <div className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle avatar-user" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {profile.image
